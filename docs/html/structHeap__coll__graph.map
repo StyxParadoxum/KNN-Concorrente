@@ -1,0 +1,5 @@
+<map id="Heap" name="Heap">
+<area shape="rect" id="Node000001" title="Estrutura que representa uma heap de máximo." alt="" coords="22,93,78,119"/>
+<area shape="rect" id="Node000002" href="$structHeapElem.html" title="Representa um elemento armazenado na heap." alt="" coords="5,5,95,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,45,53,93,47,93,47,45"/>
+</map>

@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto Programação Concorrente: Código-Fonte de heap.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projeto Programação Concorrente
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">heap.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="heap_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifndef HEAP_H</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#define HEAP_H</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structHeapElem.html">   25</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structHeapElem.html#adb7735f69a3853605dc84a1600f0827a">   26</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="structHeapElem.html#adb7735f69a3853605dc84a1600f0827a">dist</a>;  </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structHeapElem.html#a7d69f72c8ec626ba471bdfef44f48158">   27</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structHeapElem.html#a7d69f72c8ec626ba471bdfef44f48158">id</a>;       </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <a class="code hl_struct" href="structHeapElem.html">HeapElem</a>;</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structHeap.html">   36</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structHeap.html#a8d4536960440ee60af836fd6e06fa7fa">   37</a></span>  <a class="code hl_struct" href="structHeapElem.html">HeapElem</a> *<a class="code hl_variable" href="structHeap.html#a8d4536960440ee60af836fd6e06fa7fa">data</a>; </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structHeap.html#aa2252adfefbc5bdabb10f860b18b16ea">   38</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structHeap.html#aa2252adfefbc5bdabb10f860b18b16ea">n_elem</a>;     </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structHeap.html#a44e74a76fae2547a3cf3230585c47806">   39</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structHeap.html#a44e74a76fae2547a3cf3230585c47806">length</a>;     </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>} <a class="code hl_struct" href="structHeap.html">Heap</a>;</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="heap_8h.html#a546aba940a4361a354cd87737572214e">heap_init</a>(<a class="code hl_struct" href="structHeap.html">Heap</a> *h, <span class="keywordtype">int</span> length);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">void</span> <a class="code hl_function" href="heap_8h.html#a4d5fee0db6c910303d9e59a439afc1b9">heap_subir</a>(<a class="code hl_struct" href="structHeap.html">Heap</a> *h, <span class="keywordtype">int</span> i);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keywordtype">void</span> <a class="code hl_function" href="heap_8h.html#ac610b8087572a8181f2556652bccc7d4">heap_descer</a>(<a class="code hl_struct" href="structHeap.html">Heap</a> *h, <span class="keywordtype">int</span> i);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keywordtype">void</span> <a class="code hl_function" href="heap_8h.html#aaf222632c9d3a56cbdbc8baea2ab20ff">heap_inserir</a>(<a class="code hl_struct" href="structHeap.html">Heap</a> *h, <span class="keywordtype">double</span> dist, <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keywordtype">void</span> <a class="code hl_function" href="heap_8h.html#ae407d598515af5a2cdec3e154050b311">heap_libera</a>(<a class="code hl_struct" href="structHeap.html">Heap</a> *h);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif </span><span class="comment">// !HEAP_H</span></div>
+<div class="ttc" id="aheap_8h_html_a4d5fee0db6c910303d9e59a439afc1b9"><div class="ttname"><a href="heap_8h.html#a4d5fee0db6c910303d9e59a439afc1b9">heap_subir</a></div><div class="ttdeci">void heap_subir(Heap *h, int i)</div><div class="ttdoc">Move um elemento para cima na heap (heapify-up).</div><div class="ttdef"><b>Definição</b> heap.c:10</div></div>
+<div class="ttc" id="aheap_8h_html_a546aba940a4361a354cd87737572214e"><div class="ttname"><a href="heap_8h.html#a546aba940a4361a354cd87737572214e">heap_init</a></div><div class="ttdeci">void heap_init(Heap *h, int length)</div><div class="ttdoc">Inicializa uma heap de máximo.</div><div class="ttdef"><b>Definição</b> heap.c:4</div></div>
+<div class="ttc" id="aheap_8h_html_aaf222632c9d3a56cbdbc8baea2ab20ff"><div class="ttname"><a href="heap_8h.html#aaf222632c9d3a56cbdbc8baea2ab20ff">heap_inserir</a></div><div class="ttdeci">void heap_inserir(Heap *h, double dist, int id)</div><div class="ttdoc">Insere um novo elemento na heap.</div><div class="ttdef"><b>Definição</b> heap.c:36</div></div>
+<div class="ttc" id="aheap_8h_html_ac610b8087572a8181f2556652bccc7d4"><div class="ttname"><a href="heap_8h.html#ac610b8087572a8181f2556652bccc7d4">heap_descer</a></div><div class="ttdeci">void heap_descer(Heap *h, int i)</div><div class="ttdoc">Move um elemento para baixo na heap (heapify-down).</div><div class="ttdef"><b>Definição</b> heap.c:21</div></div>
+<div class="ttc" id="aheap_8h_html_ae407d598515af5a2cdec3e154050b311"><div class="ttname"><a href="heap_8h.html#ae407d598515af5a2cdec3e154050b311">heap_libera</a></div><div class="ttdeci">void heap_libera(Heap *h)</div><div class="ttdoc">Libera a memória associada à heap.</div><div class="ttdef"><b>Definição</b> heap.c:46</div></div>
+<div class="ttc" id="astructHeapElem_html"><div class="ttname"><a href="structHeapElem.html">HeapElem</a></div><div class="ttdoc">Representa um elemento armazenado na heap.</div><div class="ttdef"><b>Definição</b> heap.h:25</div></div>
+<div class="ttc" id="astructHeapElem_html_a7d69f72c8ec626ba471bdfef44f48158"><div class="ttname"><a href="structHeapElem.html#a7d69f72c8ec626ba471bdfef44f48158">HeapElem::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definição</b> heap.h:27</div></div>
+<div class="ttc" id="astructHeapElem_html_adb7735f69a3853605dc84a1600f0827a"><div class="ttname"><a href="structHeapElem.html#adb7735f69a3853605dc84a1600f0827a">HeapElem::dist</a></div><div class="ttdeci">double dist</div><div class="ttdef"><b>Definição</b> heap.h:26</div></div>
+<div class="ttc" id="astructHeap_html"><div class="ttname"><a href="structHeap.html">Heap</a></div><div class="ttdoc">Estrutura que representa uma heap de máximo.</div><div class="ttdef"><b>Definição</b> heap.h:36</div></div>
+<div class="ttc" id="astructHeap_html_a44e74a76fae2547a3cf3230585c47806"><div class="ttname"><a href="structHeap.html#a44e74a76fae2547a3cf3230585c47806">Heap::length</a></div><div class="ttdeci">int length</div><div class="ttdef"><b>Definição</b> heap.h:39</div></div>
+<div class="ttc" id="astructHeap_html_a8d4536960440ee60af836fd6e06fa7fa"><div class="ttname"><a href="structHeap.html#a8d4536960440ee60af836fd6e06fa7fa">Heap::data</a></div><div class="ttdeci">HeapElem * data</div><div class="ttdef"><b>Definição</b> heap.h:37</div></div>
+<div class="ttc" id="astructHeap_html_aa2252adfefbc5bdabb10f860b18b16ea"><div class="ttname"><a href="structHeap.html#aa2252adfefbc5bdabb10f860b18b16ea">Heap::n_elem</a></div><div class="ttdeci">int n_elem</div><div class="ttdef"><b>Definição</b> heap.h:38</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

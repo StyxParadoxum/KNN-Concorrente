@@ -1,0 +1,5 @@
+<map id="Dataset" name="Dataset">
+<area shape="rect" id="Node000001" title="Representação de um dataset de entrada a ser manipulado no programa." alt="" coords="5,108,79,133"/>
+<area shape="rect" id="Node000002" href="$structPonto.html" title="Representação de um ponto rotulado." alt="" coords="13,5,71,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,45,45,108,39,108,39,45"/>
+</map>

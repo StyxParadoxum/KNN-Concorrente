@@ -1,0 +1,7 @@
+<map id="ThreadArgs" name="ThreadArgs">
+<area shape="rect" id="Node000001" title="Estrutura de argumentos para funções executadas em threads." alt="" coords="5,196,101,221"/>
+<area shape="rect" id="Node000002" href="$structDataset.html" title="Representação de um dataset de entrada a ser manipulado no programa." alt="" coords="17,108,90,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,147,56,195,51,195,51,147"/>
+<area shape="rect" id="Node000003" href="$structPonto.html" title="Representação de um ponto rotulado." alt="" coords="24,5,83,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="56,45,56,108,51,108,51,45"/>
+</map>
