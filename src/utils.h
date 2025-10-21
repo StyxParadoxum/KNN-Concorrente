@@ -32,6 +32,18 @@ typedef struct {
 } ThreadArgs;
 
 /**
+ * @brief Função a ser executada pelas threads
+ *
+ * @details Essa função é responsável por calcular as distâncias e
+ * usar as funções definidas em heap.h para conseguir determinar os
+ * k vizinhos mais próximos
+ *
+ * @param args um ponteiro do tipo void para uma estrutura do tipo ThreadArgs
+ * @return por ora, nada.
+ */
+void *thread_worker(void *args);
+
+/**
  * @brief Calcula a distância euclidiana entre dois pontos.
  *
  * @details A distância euclidiana é definida como a raiz quadrada da soma dos
