@@ -15,6 +15,7 @@
 #define HEAP_H
 
 #include <stdlib.h>
+#include <pthread.h>
 
 /**
  * @brief Representa um elemento armazenado na heap.
@@ -37,6 +38,7 @@ typedef struct {
   HeapElem *data; /**< Vetor de elementos armazenados na heap. */
   int n_elem;     /**< Número atual de elementos presentes na heap. */
   int length;     /**< Capacidade máxima da heap. */
+  pthread_mutex_t mutex;
 } Heap;
 
 /**
