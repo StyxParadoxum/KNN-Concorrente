@@ -12,6 +12,7 @@
 #define UTILS_H
 
 #include "knn.h"
+#include "heap.h"
 
 /**
  * @brief Estrutura de argumentos para funções executadas em threads.
@@ -27,8 +28,9 @@
  */
 typedef struct {
   Dataset *dataset; /**< Ponteiro para o conjunto de dados principal. */
-  int ini;          /**< Índice inicial da fatia de dados de treino processada pela thread. */
-  int fim;          /**< Índice final da fatia de dados de treino processada pela thread. */
+  Ponto *ini;       /**< Ponto inicial da fatia de dados de treino processada pela thread. */
+  Heap ** heaps;    /**< Ponteiro para um vetor de apontadores das heaps dos pontos de teste. */
+  int n;            /**< Quantidade de pontos presentes na fatia. */
 } ThreadArgs;
 
 /**
