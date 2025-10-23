@@ -51,5 +51,10 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+# Binary data files
+*.bin
+
 # debug information files
 *.dwo
+
+src/data_gen
