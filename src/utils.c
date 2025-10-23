@@ -14,28 +14,28 @@ double distancia(const Ponto *a, const Ponto *b, int dim) {
 
 void *thread_worker(void *args) {
   double dist;
+  Ponto *p_ponto_treino;
+  Ponto *p_ponto_teste;
   Heap *p_heap;
 
   ThreadArgs *arg = (ThreadArgs*) args;
   int dim = arg->dataset->D;
-  Ponto *p_ponto_treino = arg->ini;
-  Ponto *p_ponto_teste = arg->dataset->teste;
 
   for (int i = 0; i < arg->n; i++) {
+    // obtém o ponteiro para o ponto um ponto de treino da fatia
+    p_ponto_treino = arg->ini + i;
     for (int j = 0; j < arg->dataset->M; j++) {
+      // obtém o ponteiro para o ponto de teste
+      p_ponto_teste = arg->dataset->teste + j;
       // computa a distância
       dist = distancia(p_ponto_treino, p_ponto_teste, dim);
       // obtém o ponteiro para a heap do ponto de teste
-      p_heap = arg->heaps[j];
+      p_heap = arg->heaps + j;
       // insere na heap
       pthread_mutex_lock(&p_heap->mutex);
       heap_inserir(p_heap, dist, p_ponto_treino->id);
       pthread_mutex_unlock(&p_heap->mutex);
-      // atualiza o ponto de teste
-      p_ponto_teste += dim;
     }
-    // atualiza o ponto de treino
-    p_ponto_treino += dim;
   }
   pthread_exit(NULL);
 }

@@ -29,7 +29,7 @@
 typedef struct {
   Dataset *dataset; /**< Ponteiro para o conjunto de dados principal. */
   Ponto *ini;       /**< Ponto inicial da fatia de dados de treino processada pela thread. */
-  Heap ** heaps;    /**< Ponteiro para um vetor de apontadores das heaps dos pontos de teste. */
+  Heap * heaps;    /**< Ponteiro para um vetor de heaps dos pontos de teste. */
   int n;            /**< Quantidade de pontos presentes na fatia. */
 } ThreadArgs;
 
