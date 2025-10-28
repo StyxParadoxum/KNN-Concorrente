@@ -9,13 +9,16 @@ float random_in_range(float min, float max) {
 
 // Função para gerar um dataset binário com pontos aleatórios dados pela random_in_range
 void generate_dataset(const char *filename, int points, int dimensions, float min, float max) {
-    
+
     FILE *file = fopen(filename, "wb");
-    
+
     if (!file) {
         perror("Erro ao criar arquivo");
         exit(EXIT_FAILURE);
     }
+
+    fwrite(&points, sizeof(int), 1, file);
+    fwrite(&dimensions, sizeof(int), 1, file);
 
     for (int i = 0; i < points; i++) {
         for (int j = 0; j < dimensions; j++) {
@@ -29,16 +32,16 @@ void generate_dataset(const char *filename, int points, int dimensions, float mi
 
 // Função para imprimir pontos do dataset
 void print_dataset(const char *filename, int points, int dimensions, int max_print) {
-    
+
     FILE *file = fopen(filename, "rb");
-    
+
     if (!file) {
         perror("Erro ao abrir arquivo para leitura");
         return;
     }
 
     printf("\n--- Conteúdo de %s ---\n", filename);
-    
+
     for (int i = 0; i < points && i < max_print; i++) {
         printf("Ponto %d: ", i + 1);
         for (int j = 0; j < dimensions; j++) {
@@ -58,7 +61,7 @@ void print_dataset(const char *filename, int points, int dimensions, int max_pri
 
 // Função principal para testar a geração de datasets de treino e teste e printá-los
 int main(int argc, char *argv[]) {
-    
+
     if (argc != 6) {
         fprintf(stderr, "Uso: %s <N_treino> <M_teste> <D_dimensao> <min> <max>\n", argv[0]);
         fprintf(stderr, "Exemplo: %s 1000 200 4 0 100\n", argv[0]);
