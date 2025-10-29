@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-// Função para gerar um número float aleatório no intervalo [min, max]
-float random_in_range(float min, float max) {
-    return min + ((float) rand() / RAND_MAX) * (max - min);
+// Função para gerar um número double aleatório no intervalo [min, max]
+double random_in_range(double min, double max) {
+    return min + ((double) rand() / RAND_MAX) * (max - min);
 }
 
 // Função para gerar um dataset binário com pontos aleatórios dados pela random_in_range
-void generate_dataset(const char *filename, int points, int dimensions, float min, float max) {
+void generate_dataset(const char *filename, int points, int dimensions, double min, double max) {
 
     FILE *file = fopen(filename, "wb");
 
@@ -22,8 +22,8 @@ void generate_dataset(const char *filename, int points, int dimensions, float mi
 
     for (int i = 0; i < points; i++) {
         for (int j = 0; j < dimensions; j++) {
-            float value = random_in_range(min, max);
-            fwrite(&value, sizeof(float), 1, file);
+            double value = random_in_range(min, max);
+            fwrite(&value, sizeof(double), 1, file);
         }
     }
 
@@ -45,8 +45,8 @@ void print_dataset(const char *filename, int points, int dimensions, int max_pri
     for (int i = 0; i < points && i < max_print; i++) {
         printf("Ponto %d: ", i + 1);
         for (int j = 0; j < dimensions; j++) {
-            float value;
-            fread(&value, sizeof(float), 1, file);
+            double value;
+            fread(&value, sizeof(double), 1, file);
             printf("%.2f ", value);
         }
         printf("\n");
@@ -71,8 +71,8 @@ int main(int argc, char *argv[]) {
     int N = atoi(argv[1]);       // pontos de treino
     int M = atoi(argv[2]);       // pontos de teste
     int D = atoi(argv[3]);       // dimensões
-    float min = atof(argv[4]);   // valor mínimo
-    float max = atof(argv[5]);   // valor máximo
+    double min = atof(argv[4]);   // valor mínimo
+    double max = atof(argv[5]);   // valor máximo
 
     srand(time(NULL));
 
