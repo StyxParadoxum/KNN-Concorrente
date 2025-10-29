@@ -31,7 +31,7 @@ void generate_dataset(const char *filename, int points, int dimensions, double m
 }
 
 // Função para imprimir pontos do dataset
-void print_dataset(const char *filename, int points, int dimensions, int max_print) {
+void print_dataset(const char *filename, int max_print) {
 
     FILE *file = fopen(filename, "rb");
 
@@ -41,6 +41,14 @@ void print_dataset(const char *filename, int points, int dimensions, int max_pri
     }
 
     printf("\n--- Conteúdo de %s ---\n", filename);
+
+    int points;
+    fread(&points, sizeof(int), 1, file);
+    printf("Número de pontos: %d\n", points);
+
+    int dimensions;
+    fread(&dimensions, sizeof(int), 1, file);
+    printf("Dimensões: %d\n\n", dimensions);
 
     for (int i = 0; i < points && i < max_print; i++) {
         printf("Ponto %d: ", i );
@@ -85,8 +93,8 @@ int main(int argc, char *argv[]) {
     printf("\nArquivos 'train.bin' e 'test.bin' gerados com sucesso!\n");
 
     // Impressão dos primeiros pontos
-    print_dataset("train.bin", N, D, N);
-    print_dataset("test.bin", M, D, M);
+    print_dataset("train.bin", N);
+    print_dataset("test.bin", M);
 
     return 0;
 }
