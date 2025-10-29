@@ -10,6 +10,11 @@ OBJECTS = $(SOURCES:.c=.o)
 # Diretório de saída
 BINDIR = bin
 
+# Ativar modo de depuração se DEBUG=1 for passado
+ifeq ($(DEBUG),1)
+    CFLAGS += -DDEBUG -g
+endif
+
 # Regra principal
 all: $(BINDIR) $(BINDIR)/$(TARGET) $(BINDIR)/data_gen
 
