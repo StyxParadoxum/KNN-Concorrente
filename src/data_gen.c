@@ -43,7 +43,7 @@ void print_dataset(const char *filename, int points, int dimensions, int max_pri
     printf("\n--- Conteúdo de %s ---\n", filename);
 
     for (int i = 0; i < points && i < max_print; i++) {
-        printf("Ponto %d: ", i + 1);
+        printf("Ponto %d: ", i );
         for (int j = 0; j < dimensions; j++) {
             double value;
             fread(&value, sizeof(double), 1, file);
