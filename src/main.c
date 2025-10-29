@@ -66,15 +66,6 @@ int ler_metadados(FILE *file, int *n_pontos, int *dim) {
 
 /**
  * @brief Inicializa o dataset com dados de treino e teste
- *
- * @param dataset Ponteiro para a estrutura Dataset
- * @param arquivo_treino Nome do arquivo de treino
- * @param arquivo_teste Nome do arquivo de teste
- * @param N Número de pontos de treino
- * @param M Número de pontos de teste
- * @param D Número de dimensões
- * @param K Número de vizinhos mais próximos
- * @return 0 em caso de sucesso, -1 em caso de erro
  */
 int inicializar_dataset(Dataset *dataset, const char *arquivo_treino,
                         const char *arquivo_teste, int K) {
@@ -84,17 +75,49 @@ int inicializar_dataset(Dataset *dataset, const char *arquivo_treino,
   FILE *file_treino = fopen(arquivo_treino, "rb");
   FILE *file_teste = fopen(arquivo_teste, "rb");
 
-  if (!file_treino || !file_teste ) {
-    fprintf(stderr, "Erro na abertura dos arquivos binários\n");
+  if (!file_treino) {
+    fprintf(stderr, "Erro ao abrir arquivo de treino: %s\n", arquivo_treino);
+    return -1;
+  }
+  if (!file_teste) {
+    fprintf(stderr, "Erro ao abrir arquivo de teste: %s\n", arquivo_teste);
+    fclose(file_treino);
     return -1;
   }
 
-  if (ler_metadados(file_treino, &dataset->N, &dataset->D) != 0) {
-    fprintf(stderr, "Falha no arquivo de treino\n");
+  // Lê metadados dos arquivos
+  int dim_treino, dim_teste;
+
+  if (ler_metadados(file_treino, &dataset->N, &dim_treino) != 0) {
+    fprintf(stderr, "Falha ao ler metadados do arquivo de treino\n");
+    fclose(file_treino);
+    fclose(file_teste);
     return -1;
   }
-  if (ler_metadados(file_teste, &dataset->M, &dataset->D) != 0) {
-    fprintf(stderr, "Falha no arquivo de teste\n");
+
+  if (ler_metadados(file_teste, &dataset->M, &dim_teste) != 0) {
+    fprintf(stderr, "Falha ao ler metadados do arquivo de teste\n");
+    fclose(file_treino);
+    fclose(file_teste);
+    return -1;
+  }
+
+  // Verifica se as dimensões são compatíveis
+  if (dim_treino != dim_teste) {
+    fprintf(stderr, "Erro: Dimensões incompatíveis - treino: %d, teste: %d\n",
+            dim_treino, dim_teste);
+    fclose(file_treino);
+    fclose(file_teste);
+    return -1;
+  }
+
+  dataset->D = dim_treino;
+
+  // Valida K
+  if (K <= 0 || K > dataset->N) {
+    fprintf(stderr, "Erro: K deve estar entre 1 e %d (número de pontos de treino)\n", dataset->N);
+    fclose(file_treino);
+    fclose(file_teste);
     return -1;
   }
 
@@ -104,17 +127,23 @@ int inicializar_dataset(Dataset *dataset, const char *arquivo_treino,
 
   if (!dataset->treino || !dataset->teste) {
     fprintf(stderr, "Erro de alocação de memória para datasets\n");
+    fclose(file_treino);
+    fclose(file_teste);
     return -1;
   }
 
   // Lê os datasets dos arquivos
   printf("Lendo dataset de treino...\n");
   if (ler_pontos(file_treino, dataset->treino, &dataset->N, &dataset->D) != 0) {
+    fclose(file_treino);
+    fclose(file_teste);
     return -1;
   }
 
   printf("Lendo dataset de teste...\n");
   if (ler_pontos(file_teste, dataset->teste, &dataset->M, &dataset->D) != 0) {
+    fclose(file_treino);
+    fclose(file_teste);
     return -1;
   }
 
@@ -242,32 +271,90 @@ double calcular_tempo(struct timeval start, struct timeval end) {
 }
 
 /**
+ * @brief Função para debug - verifica algumas distâncias manualmente
+ */
+void debug_distancias(Dataset *dataset) {
+  printf("\n=== DEBUG - Verificação de Distâncias ===\n");
+
+  if (dataset->M > 0 && dataset->N > 0) {
+    printf("Ponto de teste 0: [");
+    for (int j = 0; j < dataset->D; j++) {
+      printf("%.2f", dataset->teste[0].features[j]);
+      if (j < dataset->D - 1) printf(", ");
+    }
+    printf("]\n\n");
+
+    printf("Primeiras distâncias calculadas:\n");
+    for (int i = 0; i < (dataset->N < 5 ? dataset->N : 5); i++) {
+      printf("  Para treino %d [", i);
+      for (int j = 0; j < dataset->D; j++) {
+        printf("%.2f", dataset->treino[i].features[j]);
+        if (j < dataset->D - 1) printf(", ");
+      }
+      double dist = distancia(&dataset->teste[0], &dataset->treino[i], dataset->D);
+      printf("]: %.6f\n", dist);
+    }
+  }
+  printf("========================================\n\n");
+}
+
+/**
+ * @brief Debug completo do algoritmo KNN
+ */
+void debug_completo(Dataset *dataset, Heap *heaps) {
+  printf("\n=== DEBUG COMPLETO DO KNN ===\n");
+
+  for (int test_idx = 0; test_idx < (dataset->M < 2 ? dataset->M : 2); test_idx++) {
+    printf("\nPonto de teste %d: [", test_idx);
+    for (int j = 0; j < dataset->D; j++) {
+      printf("%.2f", dataset->teste[test_idx].features[j]);
+      if (j < dataset->D - 1) printf(", ");
+    }
+    printf("]\n");
+
+    printf("Distâncias calculadas:\n");
+    for (int i = 0; i < dataset->N; i++) {
+      double dist = distancia(&dataset->teste[test_idx], &dataset->treino[i], dataset->D);
+      printf("  Treino %d: %.6f\n", i, dist);
+    }
+
+    printf("Heap resultante:\n");
+    for (int j = 0; j < heaps[test_idx].n_elem; j++) {
+      printf("  ID: %d, Distância: %.6f\n", heaps[test_idx].data[j].id, heaps[test_idx].data[j].dist);
+    }
+  }
+  printf("============================\n\n");
+}
+
+/**
  * @brief Função principal
  */
 int main(int argc, char *argv[]) {
   if (argc != 5) {
-    fprintf(stderr,
-            "Uso: %s <arquivo_treino> <arquivo_teste> <N> <M> <D> <K>\n",
-            argv[0]);
+    fprintf(stderr, "Uso: %s <arquivo_treino> <arquivo_teste> <K> <N_THREADS>\n", argv[0]);
     fprintf(stderr, "  arquivo_treino: arquivo binário com dados de treino\n");
     fprintf(stderr, "  arquivo_teste: arquivo binário com dados de teste\n");
     fprintf(stderr, "  K: número de vizinhos mais próximos\n");
-    fprintf(stderr, "  N_THREADS: número threads a serem usadas\n");
-    fprintf(stderr, "Exemplo: %s train.bin test.bin 4 5\n", argv[0]);
+    fprintf(stderr, "  N_THREADS: número de threads a serem usadas\n");
+    fprintf(stderr, "Exemplo: %s train.bin test.bin 3 4\n", argv[0]);
     return 1;
   }
 
   // Parse dos argumentos
   const char *arquivo_treino = argv[1];
   const char *arquivo_teste = argv[2];
-  int K = atoi(argv[3]);                // vizinhos mais próximos
-  int num_threads = atoi(argv[4]);          // numero de threads
+  int K = atoi(argv[3]);
+  int num_threads = atoi(argv[4]);
 
-  // Validação dos parâmetros
-  // if (N <= 0 || M <= 0 || D <= 0 || K <= 0 || K > N) {
-  //   fprintf(stderr, "Parâmetros inválidos!\n");
-  //   return 1;
-  // }
+  // Validação básica dos parâmetros
+  if (K <= 0) {
+    fprintf(stderr, "Erro: K deve ser positivo\n");
+    return 1;
+  }
+  if (num_threads <= 0) {
+    fprintf(stderr, "Erro: Número de threads deve ser positivo\n");
+    return 1;
+  }
 
   // Variáveis para medição de tempo
   struct timeval inicio_total, fim_total, inicio_leitura, fim_leitura;
@@ -306,6 +393,10 @@ int main(int argc, char *argv[]) {
 
   gettimeofday(&fim_leitura, NULL);
 
+  // Debug das primeiras distâncias
+#ifdef DEBUG
+  debug_completo(&dataset, heaps);
+#endif
   // 2. CONFIGURAÇÃO DA EXECUÇÃO PARALELA
   gettimeofday(&inicio_processamento, NULL);
 
