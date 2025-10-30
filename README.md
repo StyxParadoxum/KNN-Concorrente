@@ -68,16 +68,7 @@ make generate_data
 make run
 
 # Ou executar diretamente:
-./bin/knn_main train.bin test.bin 1000 200 4 5
-```
-
-Onde os parâmetros são:
-- `train.bin`: arquivo binário com dados de treino
-- `test.bin`: arquivo binário com dados de teste
-- `1000`: número de pontos de treino
-- `200`: número de pontos de teste
-- `4`: número de dimensões dos pontos
-- `5`: número de vizinhos mais próximos (K)
+./bin/knn_main train.bin test.bin 5 4
 
 ### 3. Teste completo
 
