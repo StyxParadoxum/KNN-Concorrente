@@ -1,10 +1,12 @@
 #include "heap.h"
 #include <stdlib.h>
+#include <pthread.h>
 
 void heap_init(Heap *h, int length) {
     h->data = (HeapElem*) malloc(sizeof(HeapElem) * length);
     h->n_elem = 0;
     h->length = length;
+    pthread_mutex_init(&h->mutex, NULL);
 }
 
 void heap_subir(Heap *h, int i) {
@@ -45,4 +47,5 @@ void heap_inserir(Heap *h, double dist, int id) {
 
 void heap_libera(Heap *h) {
     free(h->data);
+    pthread_mutex_destroy(&h->mutex);
 }
