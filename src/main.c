@@ -318,10 +318,10 @@ void debug_completo(Dataset *dataset, Heap *heaps) {
       printf("  Treino %d: %.6f\n", i, dist);
     }
 
-    printf("Heap resultante:\n");
-    for (int j = 0; j < heaps[test_idx].n_elem; j++) {
-      printf("  ID: %d, Distância: %.6f\n", heaps[test_idx].data[j].id, heaps[test_idx].data[j].dist);
-    }
+    // printf("Heap resultante:\n");
+    // for (int j = 0; j < heaps[test_idx].n_elem; j++) {
+    //   printf("  ID: %d, Distância: %.6f\n", heaps[test_idx].data[j].id, heaps[test_idx].data[j].dist);
+    // }
   }
   printf("============================\n\n");
 }
