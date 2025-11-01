@@ -1,0 +1,38 @@
+=== INICIANDO EXECUÇÃO DO KNN CONCORRENTE ===
+Lendo dataset de treino...
+Lendo dataset de teste...
+Datasets carregados com sucesso!
+Treino: 100000 pontos, Teste: 1000 pontos, Dimensões: 10, K: 5
+Iniciando processamento paralelo com 2 threads...
+Processamento paralelo concluído!
+Salvando resultados...
+Resultados salvos em tests/test_b.txt
+
+Primeiros resultados (verificação):
+Ponto de teste 0 - K-vizinhos:
+  ID: 77589, Distância: 370.083151
+  ID: 69818, Distância: 354.980571
+  ID: 37342, Distância: 362.702978
+  ID: 25715, Distância: 309.208242
+  ID: 46303, Distância: 266.788646
+Ponto de teste 1 - K-vizinhos:
+  ID: 72231, Distância: 380.847766
+  ID: 79105, Distância: 371.109610
+  ID: 52858, Distância: 379.769734
+  ID: 60417, Distância: 279.455227
+  ID: 51926, Distância: 340.716534
+Ponto de teste 2 - K-vizinhos:
+  ID: 97885, Distância: 347.864102
+  ID: 4853, Distância: 319.248513
+  ID: 50503, Distância: 280.953798
+  ID: 7888, Distância: 297.213585
+  ID: 85252, Distância: 306.893262
+
+=== ESTATÍSTICAS DE EXECUÇÃO ===
+Tempo de leitura dos dados: 0.016588 segundos
+Tempo de processamento paralelo: 0.980804 segundos
+Tempo total de execução: 0.999024 segundos
+Número de threads utilizadas: 2
+===============================
+
+=== EXECUÇÃO CONCLUÍDA COM SUCESSO ===

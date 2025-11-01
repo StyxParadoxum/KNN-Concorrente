@@ -1,0 +1,53 @@
+=== INICIANDO EXECUÇÃO DO KNN CONCORRENTE ===
+Lendo dataset de treino...
+Lendo dataset de teste...
+Datasets carregados com sucesso!
+Treino: 1000000 pontos, Teste: 10000 pontos, Dimensões: 50, K: 10
+Iniciando processamento paralelo com 10 threads...
+Processamento paralelo concluído!
+Salvando resultados...
+Resultados salvos em tests/test_c.txt
+
+Primeiros resultados (verificação):
+Ponto de teste 0 - K-vizinhos:
+  ID: 280724, Distância: 1879.005570
+  ID: 774449, Distância: 1873.313108
+  ID: 25333, Distância: 1837.988525
+  ID: 291510, Distância: 1853.289385
+  ID: 286176, Distância: 1863.253711
+  ID: 161432, Distância: 1765.911107
+  ID: 350980, Distância: 1812.472498
+  ID: 767897, Distância: 1825.708182
+  ID: 415585, Distância: 1813.264400
+  ID: 794276, Distância: 1843.399811
+Ponto de teste 1 - K-vizinhos:
+  ID: 58493, Distância: 1829.409347
+  ID: 884857, Distância: 1814.343164
+  ID: 763465, Distância: 1813.653453
+  ID: 928812, Distância: 1803.320069
+  ID: 497875, Distância: 1798.250093
+  ID: 292295, Distância: 1700.790502
+  ID: 799164, Distância: 1746.420152
+  ID: 752158, Distância: 1693.225452
+  ID: 259554, Distância: 1743.373408
+  ID: 914855, Distância: 1776.941415
+Ponto de teste 2 - K-vizinhos:
+  ID: 319530, Distância: 1892.185613
+  ID: 50482, Distância: 1881.833833
+  ID: 796380, Distância: 1876.682451
+  ID: 459502, Distância: 1870.348392
+  ID: 690214, Distância: 1823.395316
+  ID: 393018, Distância: 1869.502815
+  ID: 411043, Distância: 1764.410791
+  ID: 790561, Distância: 1864.781856
+  ID: 546938, Distância: 1731.248861
+  ID: 307476, Distância: 1768.147143
+
+=== ESTATÍSTICAS DE EXECUÇÃO ===
+Tempo de leitura dos dados: 0.552948 segundos
+Tempo de processamento paralelo: 70.780511 segundos
+Tempo total de execução: 71.358596 segundos
+Número de threads utilizadas: 10
+===============================
+
+=== EXECUÇÃO CONCLUÍDA COM SUCESSO ===

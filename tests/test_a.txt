@@ -1,0 +1,603 @@
+Resultados do KNN (K=3)
+==============================
+
+Ponto de teste 0:
+K-vizinhos mais próximos:
+  ID: 562, Distância: 18.240906
+  ID: 957, Distância: 15.607840
+  ID: 395, Distância: 11.713089
+
+Ponto de teste 1:
+K-vizinhos mais próximos:
+  ID: 163, Distância: 36.347353
+  ID: 819, Distância: 17.032687
+  ID: 794, Distância: 27.173702
+
+Ponto de teste 2:
+K-vizinhos mais próximos:
+  ID: 440, Distância: 24.268703
+  ID: 816, Distância: 24.013905
+  ID: 15, Distância: 7.840652
+
+Ponto de teste 3:
+K-vizinhos mais próximos:
+  ID: 420, Distância: 24.468833
+  ID: 508, Distância: 22.625194
+  ID: 669, Distância: 9.015661
+
+Ponto de teste 4:
+K-vizinhos mais próximos:
+  ID: 929, Distância: 28.892851
+  ID: 87, Distância: 27.279572
+  ID: 644, Distância: 10.272482
+
+Ponto de teste 5:
+K-vizinhos mais próximos:
+  ID: 368, Distância: 32.066858
+  ID: 724, Distância: 30.158296
+  ID: 148, Distância: 11.491313
+
+Ponto de teste 6:
+K-vizinhos mais próximos:
+  ID: 512, Distância: 36.411057
+  ID: 683, Distância: 24.989523
+  ID: 17, Distância: 9.712773
+
+Ponto de teste 7:
+K-vizinhos mais próximos:
+  ID: 802, Distância: 31.160210
+  ID: 214, Distância: 23.555237
+  ID: 162, Distância: 25.628014
+
+Ponto de teste 8:
+K-vizinhos mais próximos:
+  ID: 487, Distância: 31.408602
+  ID: 899, Distância: 14.135606
+  ID: 382, Distância: 24.396214
+
+Ponto de teste 9:
+K-vizinhos mais próximos:
+  ID: 115, Distância: 28.819704
+  ID: 828, Distância: 19.768372
+  ID: 423, Distância: 17.451548
+
+Ponto de teste 10:
+K-vizinhos mais próximos:
+  ID: 789, Distância: 40.465024
+  ID: 271, Distância: 16.032075
+  ID: 928, Distância: 25.108410
+
+Ponto de teste 11:
+K-vizinhos mais próximos:
+  ID: 471, Distância: 24.612659
+  ID: 391, Distância: 12.911093
+  ID: 333, Distância: 10.612057
+
+Ponto de teste 12:
+K-vizinhos mais próximos:
+  ID: 900, Distância: 36.797511
+  ID: 270, Distância: 21.915167
+  ID: 504, Distância: 33.471603
+
+Ponto de teste 13:
+K-vizinhos mais próximos:
+  ID: 621, Distância: 28.697048
+  ID: 729, Distância: 15.088560
+  ID: 867, Distância: 24.262030
+
+Ponto de teste 14:
+K-vizinhos mais próximos:
+  ID: 262, Distância: 16.601472
+  ID: 402, Distância: 12.860261
+  ID: 189, Distância: 14.175657
+
+Ponto de teste 15:
+K-vizinhos mais próximos:
+  ID: 922, Distância: 22.241509
+  ID: 548, Distância: 21.473293
+  ID: 551, Distância: 19.213767
+
+Ponto de teste 16:
+K-vizinhos mais próximos:
+  ID: 591, Distância: 52.094405
+  ID: 990, Distância: 35.670617
+  ID: 911, Distância: 49.536667
+
+Ponto de teste 17:
+K-vizinhos mais próximos:
+  ID: 577, Distância: 28.195608
+  ID: 153, Distância: 27.879810
+  ID: 396, Distância: 18.860253
+
+Ponto de teste 18:
+K-vizinhos mais próximos:
+  ID: 925, Distância: 23.842638
+  ID: 675, Distância: 17.856724
+  ID: 238, Distância: 18.678306
+
+Ponto de teste 19:
+K-vizinhos mais próximos:
+  ID: 575, Distância: 27.369265
+  ID: 160, Distância: 26.891345
+  ID: 94, Distância: 25.795920
+
+Ponto de teste 20:
+K-vizinhos mais próximos:
+  ID: 696, Distância: 21.551834
+  ID: 712, Distância: 4.448052
+  ID: 104, Distância: 11.667698
+
+Ponto de teste 21:
+K-vizinhos mais próximos:
+  ID: 856, Distância: 40.923456
+  ID: 937, Distância: 33.552842
+  ID: 561, Distância: 40.320694
+
+Ponto de teste 22:
+K-vizinhos mais próximos:
+  ID: 765, Distância: 23.951655
+  ID: 305, Distância: 8.193653
+  ID: 564, Distância: 18.380549
+
+Ponto de teste 23:
+K-vizinhos mais próximos:
+  ID: 296, Distância: 20.600971
+  ID: 762, Distância: 16.752251
+  ID: 247, Distância: 19.930355
+
+Ponto de teste 24:
+K-vizinhos mais próximos:
+  ID: 884, Distância: 19.350790
+  ID: 255, Distância: 4.521420
+  ID: 903, Distância: 17.805775
+
+Ponto de teste 25:
+K-vizinhos mais próximos:
+  ID: 528, Distância: 28.404115
+  ID: 821, Distância: 0.813471
+  ID: 750, Distância: 16.328108
+
+Ponto de teste 26:
+K-vizinhos mais próximos:
+  ID: 741, Distância: 18.219202
+  ID: 681, Distância: 10.500156
+  ID: 800, Distância: 8.187214
+
+Ponto de teste 27:
+K-vizinhos mais próximos:
+  ID: 74, Distância: 37.518985
+  ID: 503, Distância: 32.219559
+  ID: 513, Distância: 20.111307
+
+Ponto de teste 28:
+K-vizinhos mais próximos:
+  ID: 703, Distância: 24.554679
+  ID: 684, Distância: 17.791157
+  ID: 710, Distância: 16.915511
+
+Ponto de teste 29:
+K-vizinhos mais próximos:
+  ID: 328, Distância: 41.337793
+  ID: 377, Distância: 39.624793
+  ID: 401, Distância: 19.290170
+
+Ponto de teste 30:
+K-vizinhos mais próximos:
+  ID: 929, Distância: 29.889965
+  ID: 578, Distância: 20.102465
+  ID: 532, Distância: 19.772487
+
+Ponto de teste 31:
+K-vizinhos mais próximos:
+  ID: 373, Distância: 25.065349
+  ID: 953, Distância: 19.282523
+  ID: 862, Distância: 11.405973
+
+Ponto de teste 32:
+K-vizinhos mais próximos:
+  ID: 799, Distância: 51.848786
+  ID: 149, Distância: 23.277841
+  ID: 376, Distância: 49.602487
+
+Ponto de teste 33:
+K-vizinhos mais próximos:
+  ID: 587, Distância: 25.542872
+  ID: 569, Distância: 17.590168
+  ID: 924, Distância: 19.334984
+
+Ponto de teste 34:
+K-vizinhos mais próximos:
+  ID: 136, Distância: 28.755881
+  ID: 583, Distância: 23.426523
+  ID: 219, Distância: 22.913506
+
+Ponto de teste 35:
+K-vizinhos mais próximos:
+  ID: 70, Distância: 17.308205
+  ID: 744, Distância: 3.544769
+  ID: 240, Distância: 14.155435
+
+Ponto de teste 36:
+K-vizinhos mais próximos:
+  ID: 887, Distância: 41.119473
+  ID: 971, Distância: 40.144927
+  ID: 524, Distância: 14.974189
+
+Ponto de teste 37:
+K-vizinhos mais próximos:
+  ID: 991, Distância: 52.837537
+  ID: 967, Distância: 24.587902
+  ID: 997, Distância: 20.404878
+
+Ponto de teste 38:
+K-vizinhos mais próximos:
+  ID: 811, Distância: 26.024558
+  ID: 314, Distância: 18.618421
+  ID: 492, Distância: 24.558041
+
+Ponto de teste 39:
+K-vizinhos mais próximos:
+  ID: 958, Distância: 24.960273
+  ID: 940, Distância: 21.329532
+  ID: 254, Distância: 17.215775
+
+Ponto de teste 40:
+K-vizinhos mais próximos:
+  ID: 922, Distância: 26.007647
+  ID: 936, Distância: 23.627028
+  ID: 548, Distância: 5.651159
+
+Ponto de teste 41:
+K-vizinhos mais próximos:
+  ID: 491, Distância: 32.041749
+  ID: 43, Distância: 23.316412
+  ID: 590, Distância: 18.992866
+
+Ponto de teste 42:
+K-vizinhos mais próximos:
+  ID: 469, Distância: 24.889859
+  ID: 777, Distância: 15.666394
+  ID: 727, Distância: 16.231599
+
+Ponto de teste 43:
+K-vizinhos mais próximos:
+  ID: 668, Distância: 20.730144
+  ID: 942, Distância: 18.652269
+  ID: 692, Distância: 19.903661
+
+Ponto de teste 44:
+K-vizinhos mais próximos:
+  ID: 723, Distância: 26.996670
+  ID: 448, Distância: 10.651596
+  ID: 960, Distância: 22.755735
+
+Ponto de teste 45:
+K-vizinhos mais próximos:
+  ID: 386, Distância: 52.037225
+  ID: 427, Distância: 41.263947
+  ID: 117, Distância: 27.720739
+
+Ponto de teste 46:
+K-vizinhos mais próximos:
+  ID: 990, Distância: 41.683185
+  ID: 885, Distância: 41.649031
+  ID: 115, Distância: 41.616168
+
+Ponto de teste 47:
+K-vizinhos mais próximos:
+  ID: 745, Distância: 31.305347
+  ID: 867, Distância: 2.936770
+  ID: 473, Distância: 29.347904
+
+Ponto de teste 48:
+K-vizinhos mais próximos:
+  ID: 622, Distância: 38.726933
+  ID: 63, Distância: 9.884107
+  ID: 50, Distância: 12.619577
+
+Ponto de teste 49:
+K-vizinhos mais próximos:
+  ID: 270, Distância: 37.518705
+  ID: 582, Distância: 30.728447
+  ID: 377, Distância: 32.728983
+
+Ponto de teste 50:
+K-vizinhos mais próximos:
+  ID: 646, Distância: 44.658789
+  ID: 427, Distância: 5.627780
+  ID: 460, Distância: 16.425690
+
+Ponto de teste 51:
+K-vizinhos mais próximos:
+  ID: 735, Distância: 11.054572
+  ID: 749, Distância: 8.967780
+  ID: 476, Distância: 10.644716
+
+Ponto de teste 52:
+K-vizinhos mais próximos:
+  ID: 443, Distância: 17.327360
+  ID: 235, Distância: 12.923453
+  ID: 589, Distância: 5.522242
+
+Ponto de teste 53:
+K-vizinhos mais próximos:
+  ID: 996, Distância: 48.855947
+  ID: 997, Distância: 22.900064
+  ID: 967, Distância: 31.993555
+
+Ponto de teste 54:
+K-vizinhos mais próximos:
+  ID: 117, Distância: 28.266451
+  ID: 208, Distância: 25.362597
+  ID: 386, Distância: 25.883271
+
+Ponto de teste 55:
+K-vizinhos mais próximos:
+  ID: 388, Distância: 22.176674
+  ID: 648, Distância: 11.883541
+  ID: 841, Distância: 13.503834
+
+Ponto de teste 56:
+K-vizinhos mais próximos:
+  ID: 989, Distância: 36.475915
+  ID: 516, Distância: 12.096530
+  ID: 980, Distância: 27.153193
+
+Ponto de teste 57:
+K-vizinhos mais próximos:
+  ID: 96, Distância: 53.659185
+  ID: 175, Distância: 50.680541
+  ID: 654, Distância: 45.221425
+
+Ponto de teste 58:
+K-vizinhos mais próximos:
+  ID: 133, Distância: 45.636883
+  ID: 762, Distância: 33.460546
+  ID: 944, Distância: 35.557318
+
+Ponto de teste 59:
+K-vizinhos mais próximos:
+  ID: 590, Distância: 31.740761
+  ID: 742, Distância: 25.254426
+  ID: 43, Distância: 19.435757
+
+Ponto de teste 60:
+K-vizinhos mais próximos:
+  ID: 581, Distância: 23.957465
+  ID: 518, Distância: 13.740735
+  ID: 919, Distância: 16.301005
+
+Ponto de teste 61:
+K-vizinhos mais próximos:
+  ID: 216, Distância: 33.071457
+  ID: 130, Distância: 24.147718
+  ID: 844, Distância: 17.655629
+
+Ponto de teste 62:
+K-vizinhos mais próximos:
+  ID: 369, Distância: 29.761255
+  ID: 296, Distância: 20.181276
+  ID: 261, Distância: 9.377042
+
+Ponto de teste 63:
+K-vizinhos mais próximos:
+  ID: 484, Distância: 25.662717
+  ID: 403, Distância: 23.327349
+  ID: 530, Distância: 21.688715
+
+Ponto de teste 64:
+K-vizinhos mais próximos:
+  ID: 656, Distância: 23.961567
+  ID: 106, Distância: 13.854897
+  ID: 113, Distância: 17.890447
+
+Ponto de teste 65:
+K-vizinhos mais próximos:
+  ID: 527, Distância: 38.806185
+  ID: 362, Distância: 33.981266
+  ID: 510, Distância: 24.212515
+
+Ponto de teste 66:
+K-vizinhos mais próximos:
+  ID: 248, Distância: 31.515334
+  ID: 403, Distância: 16.931120
+  ID: 215, Distância: 26.829298
+
+Ponto de teste 67:
+K-vizinhos mais próximos:
+  ID: 745, Distância: 42.923594
+  ID: 457, Distância: 32.200745
+  ID: 535, Distância: 36.963575
+
+Ponto de teste 68:
+K-vizinhos mais próximos:
+  ID: 941, Distância: 20.702288
+  ID: 276, Distância: 17.794235
+  ID: 383, Distância: 13.998061
+
+Ponto de teste 69:
+K-vizinhos mais próximos:
+  ID: 641, Distância: 30.038293
+  ID: 702, Distância: 18.537845
+  ID: 137, Distância: 28.802050
+
+Ponto de teste 70:
+K-vizinhos mais próximos:
+  ID: 461, Distância: 41.384783
+  ID: 673, Distância: 25.795146
+  ID: 56, Distância: 34.324079
+
+Ponto de teste 71:
+K-vizinhos mais próximos:
+  ID: 291, Distância: 23.762828
+  ID: 53, Distância: 13.719490
+  ID: 734, Distância: 21.459074
+
+Ponto de teste 72:
+K-vizinhos mais próximos:
+  ID: 354, Distância: 30.041594
+  ID: 257, Distância: 23.536362
+  ID: 18, Distância: 8.450717
+
+Ponto de teste 73:
+K-vizinhos mais próximos:
+  ID: 779, Distância: 42.645538
+  ID: 249, Distância: 38.275845
+  ID: 488, Distância: 25.493819
+
+Ponto de teste 74:
+K-vizinhos mais próximos:
+  ID: 678, Distância: 38.223545
+  ID: 713, Distância: 18.162601
+  ID: 920, Distância: 35.236208
+
+Ponto de teste 75:
+K-vizinhos mais próximos:
+  ID: 318, Distância: 21.773931
+  ID: 966, Distância: 20.715321
+  ID: 579, Distância: 14.656386
+
+Ponto de teste 76:
+K-vizinhos mais próximos:
+  ID: 648, Distância: 27.151471
+  ID: 841, Distância: 20.545598
+  ID: 388, Distância: 10.493914
+
+Ponto de teste 77:
+K-vizinhos mais próximos:
+  ID: 401, Distância: 36.794843
+  ID: 504, Distância: 24.356459
+  ID: 819, Distância: 35.533177
+
+Ponto de teste 78:
+K-vizinhos mais próximos:
+  ID: 206, Distância: 14.224069
+  ID: 479, Distância: 13.071440
+  ID: 83, Distância: 12.511443
+
+Ponto de teste 79:
+K-vizinhos mais próximos:
+  ID: 509, Distância: 22.901848
+  ID: 915, Distância: 21.940412
+  ID: 122, Distância: 15.536458
+
+Ponto de teste 80:
+K-vizinhos mais próximos:
+  ID: 478, Distância: 28.725011
+  ID: 304, Distância: 28.407604
+  ID: 400, Distância: 10.893668
+
+Ponto de teste 81:
+K-vizinhos mais próximos:
+  ID: 136, Distância: 18.493685
+  ID: 431, Distância: 15.223747
+  ID: 557, Distância: 10.627736
+
+Ponto de teste 82:
+K-vizinhos mais próximos:
+  ID: 388, Distância: 16.772828
+  ID: 841, Distância: 4.935426
+  ID: 648, Distância: 8.138324
+
+Ponto de teste 83:
+K-vizinhos mais próximos:
+  ID: 57, Distância: 41.426373
+  ID: 736, Distância: 16.781154
+  ID: 5, Distância: 12.328940
+
+Ponto de teste 84:
+K-vizinhos mais próximos:
+  ID: 35, Distância: 37.975287
+  ID: 532, Distância: 24.514657
+  ID: 98, Distância: 8.980769
+
+Ponto de teste 85:
+K-vizinhos mais próximos:
+  ID: 648, Distância: 24.927672
+  ID: 388, Distância: 19.323073
+  ID: 841, Distância: 22.149423
+
+Ponto de teste 86:
+K-vizinhos mais próximos:
+  ID: 686, Distância: 39.848703
+  ID: 269, Distância: 29.483346
+  ID: 257, Distância: 30.089799
+
+Ponto de teste 87:
+K-vizinhos mais próximos:
+  ID: 384, Distância: 38.818873
+  ID: 762, Distância: 25.976552
+  ID: 133, Distância: 13.591855
+
+Ponto de teste 88:
+K-vizinhos mais próximos:
+  ID: 60, Distância: 28.645298
+  ID: 258, Distância: 25.739977
+  ID: 875, Distância: 27.895065
+
+Ponto de teste 89:
+K-vizinhos mais próximos:
+  ID: 677, Distância: 20.720717
+  ID: 253, Distância: 17.848599
+  ID: 778, Distância: 5.944119
+
+Ponto de teste 90:
+K-vizinhos mais próximos:
+  ID: 636, Distância: 24.916113
+  ID: 51, Distância: 13.380349
+  ID: 97, Distância: 16.093355
+
+Ponto de teste 91:
+K-vizinhos mais próximos:
+  ID: 770, Distância: 27.826610
+  ID: 597, Distância: 17.089804
+  ID: 150, Distância: 15.054269
+
+Ponto de teste 92:
+K-vizinhos mais próximos:
+  ID: 41, Distância: 37.418131
+  ID: 985, Distância: 34.437431
+  ID: 637, Distância: 13.612380
+
+Ponto de teste 93:
+K-vizinhos mais próximos:
+  ID: 505, Distância: 30.938455
+  ID: 222, Distância: 18.042910
+  ID: 316, Distância: 20.123211
+
+Ponto de teste 94:
+K-vizinhos mais próximos:
+  ID: 894, Distância: 34.590365
+  ID: 223, Distância: 28.699430
+  ID: 201, Distância: 32.004534
+
+Ponto de teste 95:
+K-vizinhos mais próximos:
+  ID: 554, Distância: 38.218257
+  ID: 233, Distância: 29.917043
+  ID: 682, Distância: 29.957151
+
+Ponto de teste 96:
+K-vizinhos mais próximos:
+  ID: 393, Distância: 35.494598
+  ID: 900, Distância: 29.626159
+  ID: 424, Distância: 15.747145
+
+Ponto de teste 97:
+K-vizinhos mais próximos:
+  ID: 775, Distância: 37.360054
+  ID: 173, Distância: 20.869043
+  ID: 902, Distância: 4.515784
+
+Ponto de teste 98:
+K-vizinhos mais próximos:
+  ID: 1, Distância: 29.935960
+  ID: 92, Distância: 15.464291
+  ID: 161, Distância: 13.671862
+
+Ponto de teste 99:
+K-vizinhos mais próximos:
+  ID: 994, Distância: 45.101860
+  ID: 182, Distância: 44.420342
+  ID: 779, Distância: 42.080219
+
