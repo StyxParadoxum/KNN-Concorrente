@@ -330,7 +330,7 @@ void debug_completo(Dataset *dataset, Heap *heaps) {
  * @brief Função principal
  */
 int main(int argc, char *argv[]) {
-  if (argc != 5) {
+  if (argc < 5) {
     fprintf(stderr, "Uso: %s <arquivo_treino> <arquivo_teste> <K> <N_THREADS>\n", argv[0]);
     fprintf(stderr, "  arquivo_treino: arquivo binário com dados de treino\n");
     fprintf(stderr, "  arquivo_teste: arquivo binário com dados de teste\n");
@@ -467,7 +467,8 @@ int main(int argc, char *argv[]) {
 
   // 4. CLASSIFICAÇÃO E SAÍDA
   printf("Salvando resultados...\n");
-  salvar_resultados(heaps, M, K, "output.txt");
+  char *filename = argc == 6 ? argv[5] : "output.txt";
+  salvar_resultados(heaps, M, K, filename);
 
   // Exibir alguns resultados no terminal para verificação
   printf("\nPrimeiros resultados (verificação):\n");
