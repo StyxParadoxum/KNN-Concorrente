@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['length_0',['length',['../structHeap.html#a44e74a76fae2547a3cf3230585c47806',1,'Heap']]]
+  ['k_0',['K',['../structDataset.html#a20185f4d78c53d3a2b4d8d1151075f46',1,'Dataset']]]
 ];

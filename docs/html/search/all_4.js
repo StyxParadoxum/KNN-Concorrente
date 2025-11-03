@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['id_0',['id',['../structHeapElem.html#a7d69f72c8ec626ba471bdfef44f48158',1,'HeapElem::id'],['../structPonto.html#a7e3e5372da8d32be030932cfdcfd8888',1,'Ponto::id']]],
-  ['ini_1',['ini',['../structThreadArgs.html#af683c0af3e226bf42d80dbfa7b785719',1,'ThreadArgs']]]
+  ['algoritmo_20knn_0',['2. Executar o algoritmo KNN',['../md_README.html#autotoc_md7',1,'']]],
+  ['arquitetura_1',['Arquitetura',['../md_README.html#autotoc_md2',1,'']]],
+  ['arquivos_20compilados_20e_20dados_20gerados_2',['Remove arquivos compilados e dados gerados',['../md_README.html#autotoc_md11',1,'']]],
+  ['automaticamente_3',['Gera dados e executa o programa automaticamente',['../md_README.html#autotoc_md8',1,'']]]
 ];

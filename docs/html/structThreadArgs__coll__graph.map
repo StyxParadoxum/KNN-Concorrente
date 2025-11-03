@@ -1,7 +1,12 @@
 <map id="ThreadArgs" name="ThreadArgs">
-<area shape="rect" id="Node000001" title="Estrutura de argumentos para funções executadas em threads." alt="" coords="5,196,101,221"/>
-<area shape="rect" id="Node000002" href="$structDataset.html" title="Representação de um dataset de entrada a ser manipulado no programa." alt="" coords="17,108,90,133"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,147,56,195,51,195,51,147"/>
-<area shape="rect" id="Node000003" href="$structPonto.html" title="Representação de um ponto rotulado." alt="" coords="24,5,83,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="56,45,56,108,51,108,51,45"/>
+<area shape="rect" id="Node000001" title="Estrutura de argumentos para funções executadas em threads." alt="" coords="33,196,129,221"/>
+<area shape="rect" id="Node000002" href="$structDataset.html" title="Representação de um dataset de entrada a ser manipulado no programa." alt="" coords="44,108,118,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,147,84,195,78,195,78,147"/>
+<area shape="rect" id="Node000003" href="$structPonto.html" title="Representação de um ponto rotulado." alt="" coords="6,5,65,31"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="25,44,10,86,8,110,13,132,23,151,37,168,66,194,62,198,33,171,19,154,8,134,3,110,5,85,20,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="49,42,78,107,74,109,44,45"/>
+<area shape="rect" id="Node000004" href="$structHeap.html" title="Estrutura que representa uma heap de máximo." alt="" coords="142,108,198,133"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="161,147,140,174,107,198,104,194,137,170,156,144"/>
+<area shape="rect" id="Node000005" href="$structHeapElem.html" title="Representa um elemento armazenado na heap." alt="" coords="126,5,215,31"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="173,45,173,108,168,108,168,45"/>
 </map>

@@ -1,5 +1,11 @@
 <map id="src/utils.h" name="src/utils.h">
-<area shape="rect" id="Node000001" title="Declarações de funções e estruturas utilitárias do projeto." alt="" coords="5,5,91,31"/>
-<area shape="rect" id="Node000002" href="$knn_8h.html" title="Estruturas e funções para representação de elementos em um dataset." alt="" coords="19,79,77,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,31,51,65,45,65,45,31"/>
+<area shape="rect" id="Node000001" title="Declarações de funções e estruturas utilitárias do projeto." alt="" coords="35,5,120,31"/>
+<area shape="rect" id="Node000002" href="$knn_8h.html" title="Estruturas e funções para representação de elementos em um dataset." alt="" coords="5,79,64,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,32,51,68,46,66,68,30"/>
+<area shape="rect" id="Node000003" href="$heap_8h.html" title="Interface pública para uma heap de máximo genérica." alt="" coords="88,79,155,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="87,30,109,66,105,68,82,32"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="35,152,106,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="115,106,89,142,85,139,111,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="130,152,214,177"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="132,103,158,139,154,142,128,106"/>
 </map>

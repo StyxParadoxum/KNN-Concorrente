@@ -1,8 +1,11 @@
 <map id="src/heap.c" name="src/heap.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="29,5,117,31"/>
-<area shape="rect" id="Node000002" href="$heap_8h.html" title="Interface pública para uma heap de máximo genérica." alt="" coords="5,79,72,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,32,53,67,48,65,65,30"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="38,152,109,177"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="79,30,85,63,87,104,81,139,76,138,81,104,80,64,74,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="47,103,64,138,59,141,42,106"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="58,5,146,31"/>
+<area shape="rect" id="Node000002" href="$heap_8h.html" title="Interface pública para uma heap de máximo genérica." alt="" coords="69,79,135,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,31,105,65,99,65,99,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,76,177"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="92,33,75,54,59,80,50,110,45,139,40,138,44,109,54,78,71,51,88,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="120,152,204,177"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="116,29,134,51,150,78,159,109,163,138,158,139,154,110,145,80,129,54,112,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,106,62,143,58,140,90,103"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="114,103,146,140,141,143,110,106"/>
 </map>

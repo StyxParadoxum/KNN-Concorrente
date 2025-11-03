@@ -72,7 +72,118 @@ $(function() {
   <div class="headertitle"><div class="title">KNN-Concorrente</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> Implementação concorrente do algoritmo K-Nearest Neighbors (KNN) em C usando threads POSIX.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Descrição</h1>
+<p>Este projeto implementa uma versão paralela do algoritmo KNN que calcula os K vizinhos mais próximos para cada ponto de teste em relação a um conjunto de treino. A implementação utiliza threads para paralelizar o processamento, melhorando significativamente o desempenho para datasets grandes.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Arquitetura</h1>
+<p>O projeto está organizado nos seguintes módulos:</p>
+<ul>
+<li><b><a class="el" href="main_8c.html" title="Módulo principal do programa KNN concorrente.">main.c</a></b>: Módulo principal que coordena a execução</li>
+<li><b><a class="el" href="heap_8h.html" title="Interface pública para uma heap de máximo genérica.">heap.h</a>/heap.c</b>: Implementação de heap de máximo thread-safe para armazenar os K vizinhos mais próximos</li>
+<li><b><a class="el" href="utils_8h.html" title="Declarações de funções e estruturas utilitárias do projeto.">utils.h</a>/utils.c</b>: Funções utilitárias incluindo cálculo de distância euclidiana e função worker das threads</li>
+<li><b><a class="el" href="knn_8h.html" title="Estruturas e funções para representação de elementos em um dataset.">knn.h</a></b>: Definições das estruturas <a class="el" href="structDataset.html" title="Representação de um dataset de entrada a ser manipulado no programa.">Dataset</a> e <a class="el" href="structPonto.html" title="Representação de um ponto rotulado.">Ponto</a></li>
+<li><b><a class="el" href="data__gen_8c.html">data_gen.c</a></b>: Gerador de datasets de teste e treino</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Estruturas principais</h2>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line">  <span class="keywordtype">double</span> *features; <span class="comment">// Vetor de características</span></div>
+<div class="line">  <span class="keywordtype">int</span> id;          <span class="comment">// Identificador do ponto</span></div>
+<div class="line">} <a class="code hl_struct" href="structPonto.html">Ponto</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line">  <a class="code hl_struct" href="structPonto.html">Ponto</a> *treino;   <span class="comment">// Conjunto de treino</span></div>
+<div class="line">  <a class="code hl_struct" href="structPonto.html">Ponto</a> *teste;    <span class="comment">// Conjunto de teste</span></div>
+<div class="line">  <span class="keywordtype">int</span> M;           <span class="comment">// Número de pontos de teste</span></div>
+<div class="line">  <span class="keywordtype">int</span> N;           <span class="comment">// Número de pontos de treino</span></div>
+<div class="line">  <span class="keywordtype">int</span> D;           <span class="comment">// Número de dimensões</span></div>
+<div class="line">  <span class="keywordtype">int</span> K;           <span class="comment">// Número de vizinhos mais próximos</span></div>
+<div class="line">} <a class="code hl_struct" href="structDataset.html">Dataset</a>;</div>
+<div class="ttc" id="astructDataset_html"><div class="ttname"><a href="structDataset.html">Dataset</a></div><div class="ttdoc">Representação de um dataset de entrada a ser manipulado no programa.</div><div class="ttdef"><b>Definição</b> knn.h:23</div></div>
+<div class="ttc" id="astructPonto_html"><div class="ttname"><a href="structPonto.html">Ponto</a></div><div class="ttdoc">Representação de um ponto rotulado.</div><div class="ttdef"><b>Definição</b> knn.h:12</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
+Compilação</h1>
+<p>O projeto inclui um Makefile para facilitar a compilação:</p>
+<div class="fragment"><div class="line"># Compilar todos os programas</div>
+<div class="line">make all</div>
+<div class="line"> </div>
+<div class="line"># Compilar apenas o programa principal</div>
+<div class="line">make bin/knn_main</div>
+<div class="line"> </div>
+<div class="line"># Compilar apenas o gerador de dados</div>
+<div class="line">make bin/data_gen</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+Uso</h1>
+<h2><a class="anchor" id="autotoc_md6"></a>
+1. Gerar datasets de teste</h2>
+<div class="fragment"><div class="line"># Gera datasets com 1000 pontos de treino e 200 de teste, 4 dimensões, valores entre 0 e 100</div>
+<div class="line">make generate_data</div>
+<div class="line"> </div>
+<div class="line"># Ou executar diretamente:</div>
+<div class="line">./bin/data_gen 1000 200 4 0 100</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
+2. Executar o algoritmo KNN</h2>
+<div class="fragment"><div class="line"># Executar com os datasets gerados</div>
+<div class="line">make run</div>
+<div class="line"> </div>
+<div class="line"># Ou executar diretamente:</div>
+<div class="line">./bin/knn_main train.bin test.bin 5 4</div>
+<div class="line"> </div>
+<div class="line">### 3. Teste completo</div>
+</div><!-- fragment --><p> bash </p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Gera dados e executa o programa automaticamente</h1>
+<p>make test </p><div class="fragment"><div class="line">## Características</div>
+<div class="line"> </div>
+<div class="line">### Paralelização</div>
+<div class="line"> </div>
+<div class="line">- Utiliza 4 threads por padrão para processamento paralelo</div>
+<div class="line">- Cada thread processa uma fatia do conjunto de treino</div>
+<div class="line">- Heaps thread-safe com mutexes para evitar condições de corrida</div>
+<div class="line"> </div>
+<div class="line">### Estrutura de Dados</div>
+<div class="line"> </div>
+<div class="line">- **Heap de máximo**: Mantém os K vizinhos mais próximos para cada ponto de teste</div>
+<div class="line">- **Thread safety**: Cada heap possui seu próprio mutex</div>
+<div class="line">- **Memória eficiente**: Alocação dinâmica com limpeza adequada</div>
+<div class="line"> </div>
+<div class="line">### Métricas de Desempenho</div>
+<div class="line"> </div>
+<div class="line">O programa exibe estatísticas detalhadas:</div>
+<div class="line">- Tempo de leitura dos dados</div>
+<div class="line">- Tempo de processamento paralelo</div>
+<div class="line">- Tempo total de execução</div>
+<div class="line">- Número de threads utilizadas</div>
+<div class="line"> </div>
+<div class="line">## Saída</div>
+<div class="line"> </div>
+<div class="line">### Terminal</div>
+<div class="line">O programa exibe informações de progresso e estatísticas de execução no terminal.</div>
+<div class="line"> </div>
+<div class="line">### Arquivo output.txt</div>
+<div class="line">Os resultados são salvos em `output.txt` com o formato:</div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md9"></a>
+Resultados do KNN (K=5)</h1>
+<p><a class="el" href="structPonto.html" title="Representação de um ponto rotulado.">Ponto</a> de teste 0: K-vizinhos mais próximos: ID: 439, Distância: 33.570272 ID: 244, Distância: 29.351958 ... </p><div class="fragment"><div class="line">## Exemplo de Execução</div>
+</div><!-- fragment --><p> bash $ make test ./bin/data_gen 1000 200 4 0 100 Gerando 1000 pontos de treino e 200 de teste (4 dimensões) no intervalo [0.00, 100.00] Arquivos 'train.bin' e 'test.bin' gerados com sucesso! Datasets gerados: train.bin (1000 pontos) e test.bin (200 pontos)</p>
+<p>./bin/knn_main train.bin test.bin 1000 200 4 5 === INICIANDO EXECUÇÃO DO KNN CONCORRENTE === Lendo dataset de treino... Lendo dataset de teste... Datasets carregados com sucesso! Treino: 1000 pontos, Teste: 200 pontos, Dimensões: 4, K: 5 Iniciando processamento paralelo com 4 threads... Processamento paralelo concluído!</p>
+<p>=== ESTATÍSTICAS DE EXECUÇÃO === Tempo de leitura dos dados: 0.000969 segundos Tempo de processamento paralelo: 0.012666 segundos Tempo total de execução: 0.016010 segundos </p>
+<h1><a class="anchor" id="autotoc_md10"></a>
+Número de threads utilizadas: 4</h1>
+<div class="fragment"><div class="line">## Limpeza</div>
+</div><!-- fragment --><p> bash </p>
+<h1><a class="anchor" id="autotoc_md11"></a>
+Remove arquivos compilados e dados gerados</h1>
+<p>make clean </p><div class="fragment"><div class="line">## Requisitos</div>
+<div class="line"> </div>
+<div class="line">- GCC com suporte a C99</div>
+<div class="line">- Biblioteca pthread</div>
+<div class="line">- Sistema Unix/Linux</div>
+<div class="line"> </div>
+<div class="line">## Comandos Úteis</div>
+</div><!-- fragment --><p> bash make help # Mostra ajuda com todos os comandos disponíveis make clean # Limpa arquivos compilados make all # Compila todos os programas make test # Execução completa (gerar dados + executar) ``` </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['k_0',['K',['../structDataset.html#a20185f4d78c53d3a2b4d8d1151075f46',1,'Dataset']]],
-  ['knn_20concorrente_1',['KNN-Concorrente',['../md_README.html',1,'']]],
-  ['knn_2eh_2',['knn.h',['../knn_8h.html',1,'']]]
+  ['calcular_5ftempo_0',['calcular_tempo',['../main_8c.html#a19668515ed81c05c12def4d9691306f6',1,'main.c']]],
+  ['compilação_1',['Compilação',['../md_README.html#autotoc_md4',1,'']]],
+  ['compilados_20e_20dados_20gerados_2',['Remove arquivos compilados e dados gerados',['../md_README.html#autotoc_md11',1,'']]],
+  ['concorrente_3',['KNN-Concorrente',['../md_README.html',1,'']]]
 ];

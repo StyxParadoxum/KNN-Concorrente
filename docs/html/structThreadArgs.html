@@ -85,11 +85,16 @@ Diagrama de colaboração para ThreadArgs:</div>
 <div class="dyncontent">
 <div class="center"><img src="structThreadArgs__coll__graph.png" border="0" usemap="#aThreadArgs_coll__map" alt="Collaboration graph"/></div>
 <map name="aThreadArgs_coll__map" id="aThreadArgs_coll__map">
-<area shape="rect" title="Estrutura de argumentos para funções executadas em threads." alt="" coords="5,196,101,221"/>
-<area shape="rect" href="structDataset.html" title="Representação de um dataset de entrada a ser manipulado no programa." alt="" coords="17,108,90,133"/>
-<area shape="poly" title=" " alt="" coords="56,147,56,195,51,195,51,147"/>
-<area shape="rect" href="structPonto.html" title="Representação de um ponto rotulado." alt="" coords="24,5,83,31"/>
-<area shape="poly" title=" " alt="" coords="56,45,56,108,51,108,51,45"/>
+<area shape="rect" title="Estrutura de argumentos para funções executadas em threads." alt="" coords="33,196,129,221"/>
+<area shape="rect" href="structDataset.html" title="Representação de um dataset de entrada a ser manipulado no programa." alt="" coords="44,108,118,133"/>
+<area shape="poly" title=" " alt="" coords="84,147,84,195,78,195,78,147"/>
+<area shape="rect" href="structPonto.html" title="Representação de um ponto rotulado." alt="" coords="6,5,65,31"/>
+<area shape="poly" title=" " alt="" coords="25,44,10,86,8,110,13,132,23,151,37,168,66,194,62,198,33,171,19,154,8,134,3,110,5,85,20,42"/>
+<area shape="poly" title=" " alt="" coords="49,42,78,107,74,109,44,45"/>
+<area shape="rect" href="structHeap.html" title="Estrutura que representa uma heap de máximo." alt="" coords="142,108,198,133"/>
+<area shape="poly" title=" " alt="" coords="161,147,140,174,107,198,104,194,137,170,156,144"/>
+<area shape="rect" href="structHeapElem.html" title="Representa um elemento armazenado na heap." alt="" coords="126,5,215,31"/>
+<area shape="poly" title=" " alt="" coords="173,45,173,108,168,108,168,45"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
@@ -97,10 +102,12 @@ Diagrama de colaboração para ThreadArgs:</div>
 Atributos Públicos</h2></td></tr>
 <tr class="memitem:a7878170b3736a8fb2bd3b4d0a478830e" id="r_a7878170b3736a8fb2bd3b4d0a478830e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDataset.html">Dataset</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structThreadArgs.html#a7878170b3736a8fb2bd3b4d0a478830e">dataset</a></td></tr>
 <tr class="separator:a7878170b3736a8fb2bd3b4d0a478830e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af683c0af3e226bf42d80dbfa7b785719" id="r_af683c0af3e226bf42d80dbfa7b785719"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structThreadArgs.html#af683c0af3e226bf42d80dbfa7b785719">ini</a></td></tr>
-<tr class="separator:af683c0af3e226bf42d80dbfa7b785719"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b3f6d551e020a253b32b0165e2dc323" id="r_a9b3f6d551e020a253b32b0165e2dc323"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structThreadArgs.html#a9b3f6d551e020a253b32b0165e2dc323">fim</a></td></tr>
-<tr class="separator:a9b3f6d551e020a253b32b0165e2dc323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b4847e5d026c71c7136b0d78f192a0" id="r_a99b4847e5d026c71c7136b0d78f192a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPonto.html">Ponto</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structThreadArgs.html#a99b4847e5d026c71c7136b0d78f192a0">ini</a></td></tr>
+<tr class="separator:a99b4847e5d026c71c7136b0d78f192a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c558c1b9db26bd9b0a4119a9f725f37" id="r_a0c558c1b9db26bd9b0a4119a9f725f37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structHeap.html">Heap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structThreadArgs.html#a0c558c1b9db26bd9b0a4119a9f725f37">heaps</a></td></tr>
+<tr class="separator:a0c558c1b9db26bd9b0a4119a9f725f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67eed0f1ba6a4ba324974e9f8ed6378" id="r_aa67eed0f1ba6a4ba324974e9f8ed6378"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structThreadArgs.html#aa67eed0f1ba6a4ba324974e9f8ed6378">n</a></td></tr>
+<tr class="separator:aa67eed0f1ba6a4ba324974e9f8ed6378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
 <div class="textblock"><p>Estrutura de argumentos para funções executadas em threads. </p>
@@ -122,33 +129,48 @@ Atributos Públicos</h2></td></tr>
 
 </div>
 </div>
-<a id="a9b3f6d551e020a253b32b0165e2dc323" name="a9b3f6d551e020a253b32b0165e2dc323"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b3f6d551e020a253b32b0165e2dc323">&#9670;&#160;</a></span>fim</h2>
+<a id="a0c558c1b9db26bd9b0a4119a9f725f37" name="a0c558c1b9db26bd9b0a4119a9f725f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c558c1b9db26bd9b0a4119a9f725f37">&#9670;&#160;</a></span>heaps</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ThreadArgs::fim</td>
+          <td class="memname"><a class="el" href="structHeap.html">Heap</a>* ThreadArgs::heaps</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Índice final da fatia de dados de treino processada pela thread. </p>
+<p>Ponteiro para um vetor de heaps dos pontos de teste. </p>
 
 </div>
 </div>
-<a id="af683c0af3e226bf42d80dbfa7b785719" name="af683c0af3e226bf42d80dbfa7b785719"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af683c0af3e226bf42d80dbfa7b785719">&#9670;&#160;</a></span>ini</h2>
+<a id="a99b4847e5d026c71c7136b0d78f192a0" name="a99b4847e5d026c71c7136b0d78f192a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b4847e5d026c71c7136b0d78f192a0">&#9670;&#160;</a></span>ini</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ThreadArgs::ini</td>
+          <td class="memname"><a class="el" href="structPonto.html">Ponto</a>* ThreadArgs::ini</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Índice inicial da fatia de dados de treino processada pela thread. </p>
+<p><a class="el" href="structPonto.html" title="Representação de um ponto rotulado.">Ponto</a> inicial da fatia de dados de treino processada pela thread. </p>
+
+</div>
+</div>
+<a id="aa67eed0f1ba6a4ba324974e9f8ed6378" name="aa67eed0f1ba6a4ba324974e9f8ed6378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa67eed0f1ba6a4ba324974e9f8ed6378">&#9670;&#160;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ThreadArgs::n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Quantidade de pontos presentes na fatia. </p>
 
 </div>
 </div>

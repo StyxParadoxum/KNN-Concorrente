@@ -1,0 +1,628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto Programação Concorrente: Referência do Arquivo src/main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projeto Programação Concorrente
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo main.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Módulo principal do programa KNN concorrente.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;sys/time.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="heap_8h_source.html">heap.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="knn_8h_source.html">knn.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para main.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c__incl.png" border="0" usemap="#asrc_2main_8c" alt=""/></div>
+<map name="asrc_2main_8c" id="asrc_2main_8c">
+<area shape="rect" title="Módulo principal do programa KNN concorrente." alt="" coords="200,5,289,31"/>
+<area shape="rect" title=" " alt="" coords="5,225,89,251"/>
+<area shape="poly" title=" " alt="" coords="201,27,134,44,99,59,69,81,49,102,38,123,35,147,37,177,43,212,38,213,31,178,30,147,33,122,45,99,66,77,97,55,132,39,199,22"/>
+<area shape="rect" title=" " alt="" coords="282,79,349,104"/>
+<area shape="poly" title=" " alt="" coords="258,29,296,67,292,71,254,33"/>
+<area shape="rect" title=" " alt="" coords="161,225,232,251"/>
+<area shape="poly" title=" " alt="" coords="246,31,235,94,218,178,208,213,203,211,213,177,230,93,240,31"/>
+<area shape="rect" title=" " alt="" coords="373,79,444,104"/>
+<area shape="poly" title=" " alt="" coords="272,28,371,71,368,76,270,33"/>
+<area shape="rect" title=" " alt="" coords="469,79,559,104"/>
+<area shape="poly" title=" " alt="" coords="289,28,458,73,457,78,287,33"/>
+<area shape="rect" title=" " alt="" coords="583,79,647,104"/>
+<area shape="poly" title=" " alt="" coords="290,24,413,45,571,76,570,81,412,50,289,29"/>
+<area shape="rect" href="heap_8h.html" title="Interface pública para uma heap de máximo genérica." alt="" coords="46,152,113,177"/>
+<area shape="poly" title=" " alt="" coords="200,25,169,30,137,40,107,57,83,80,76,94,74,108,75,138,70,139,68,108,71,92,79,77,104,52,135,36,168,25,199,19"/>
+<area shape="rect" href="knn_8h.html" title="Estruturas e funções para representação de elementos em um dataset." alt="" coords="145,152,203,177"/>
+<area shape="poly" title=" " alt="" coords="241,32,188,141,183,138,236,30"/>
+<area shape="rect" href="utils_8h.html" title="Declarações de funções e estruturas utilitárias do projeto." alt="" coords="93,79,156,104"/>
+<area shape="poly" title=" " alt="" coords="227,33,158,74,155,69,224,28"/>
+<area shape="poly" title=" " alt="" coords="76,179,60,214,56,212,72,177"/>
+<area shape="poly" title=" " alt="" coords="100,175,167,216,164,220,97,180"/>
+<area shape="poly" title=" " alt="" coords="119,106,96,142,92,139,115,103"/>
+<area shape="poly" title=" " alt="" coords="135,103,160,139,156,142,131,106"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a038b37e31a279e88623e6073ef4b6390" id="r_a038b37e31a279e88623e6073ef4b6390"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a038b37e31a279e88623e6073ef4b6390">ler_pontos</a> (FILE *file, <a class="el" href="structPonto.html">Ponto</a> *pontos, int *n_pontos, int *dimensoes)</td></tr>
+<tr class="memdesc:a038b37e31a279e88623e6073ef4b6390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê um dataset binário de um arquivo.  <br /></td></tr>
+<tr class="separator:a038b37e31a279e88623e6073ef4b6390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b7bbb9a7cfa6c39d77db544887890e6" id="r_a8b7bbb9a7cfa6c39d77db544887890e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a8b7bbb9a7cfa6c39d77db544887890e6">ler_metadados</a> (FILE *file, int *n_pontos, int *dim)</td></tr>
+<tr class="separator:a8b7bbb9a7cfa6c39d77db544887890e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692e73d39b0df02827393cd8e6b71da3" id="r_a692e73d39b0df02827393cd8e6b71da3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a692e73d39b0df02827393cd8e6b71da3">inicializar_dataset</a> (<a class="el" href="structDataset.html">Dataset</a> *dataset, const char *arquivo_treino, const char *arquivo_teste, int K)</td></tr>
+<tr class="memdesc:a692e73d39b0df02827393cd8e6b71da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa o dataset com dados de treino e teste.  <br /></td></tr>
+<tr class="separator:a692e73d39b0df02827393cd8e6b71da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69da6c839cd24c043d169f495910c24b" id="r_a69da6c839cd24c043d169f495910c24b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a69da6c839cd24c043d169f495910c24b">inicializar_heaps</a> (<a class="el" href="structHeap.html">Heap</a> *heaps, int M, int K)</td></tr>
+<tr class="memdesc:a69da6c839cd24c043d169f495910c24b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa as heaps para cada ponto de teste.  <br /></td></tr>
+<tr class="separator:a69da6c839cd24c043d169f495910c24b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94156a1cf0b9b427792c193b88e7bb9" id="r_ac94156a1cf0b9b427792c193b88e7bb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac94156a1cf0b9b427792c193b88e7bb9">liberar_heaps</a> (<a class="el" href="structHeap.html">Heap</a> *heaps, int M)</td></tr>
+<tr class="memdesc:ac94156a1cf0b9b427792c193b88e7bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera a memória das heaps.  <br /></td></tr>
+<tr class="separator:ac94156a1cf0b9b427792c193b88e7bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7b198254de30c5f288633930be644d" id="r_a1e7b198254de30c5f288633930be644d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a1e7b198254de30c5f288633930be644d">liberar_dataset</a> (<a class="el" href="structDataset.html">Dataset</a> *dataset)</td></tr>
+<tr class="memdesc:a1e7b198254de30c5f288633930be644d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera a memória do dataset.  <br /></td></tr>
+<tr class="separator:a1e7b198254de30c5f288633930be644d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6c0b64ea6661d9fc2653f848fb6a0d" id="r_a2e6c0b64ea6661d9fc2653f848fb6a0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2e6c0b64ea6661d9fc2653f848fb6a0d">salvar_resultados</a> (<a class="el" href="structHeap.html">Heap</a> *heaps, int M, int K, const char *filename)</td></tr>
+<tr class="memdesc:a2e6c0b64ea6661d9fc2653f848fb6a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Salva os resultados em um arquivo.  <br /></td></tr>
+<tr class="separator:a2e6c0b64ea6661d9fc2653f848fb6a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af72ee09b63345ec496685622aa90e34d" id="r_af72ee09b63345ec496685622aa90e34d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af72ee09b63345ec496685622aa90e34d">exibir_estatisticas</a> (double tempo_leitura, double tempo_processamento, double tempo_total, int num_threads)</td></tr>
+<tr class="memdesc:af72ee09b63345ec496685622aa90e34d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe as estatísticas de execução.  <br /></td></tr>
+<tr class="separator:af72ee09b63345ec496685622aa90e34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19668515ed81c05c12def4d9691306f6" id="r_a19668515ed81c05c12def4d9691306f6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a19668515ed81c05c12def4d9691306f6">calcular_tempo</a> (struct timeval start, struct timeval end)</td></tr>
+<tr class="memdesc:a19668515ed81c05c12def4d9691306f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a diferença de tempo entre dois timevals.  <br /></td></tr>
+<tr class="separator:a19668515ed81c05c12def4d9691306f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42bfb634deb867eba27f8b9c64d5d9d9" id="r_a42bfb634deb867eba27f8b9c64d5d9d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a42bfb634deb867eba27f8b9c64d5d9d9">debug_distancias</a> (<a class="el" href="structDataset.html">Dataset</a> *dataset)</td></tr>
+<tr class="memdesc:a42bfb634deb867eba27f8b9c64d5d9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para debug - verifica algumas distâncias manualmente.  <br /></td></tr>
+<tr class="separator:a42bfb634deb867eba27f8b9c64d5d9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31d5075dfdc6a9a4f77f575e0030ad01" id="r_a31d5075dfdc6a9a4f77f575e0030ad01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a31d5075dfdc6a9a4f77f575e0030ad01">debug_completo</a> (<a class="el" href="structDataset.html">Dataset</a> *dataset, <a class="el" href="structHeap.html">Heap</a> *heaps)</td></tr>
+<tr class="memdesc:a31d5075dfdc6a9a4f77f575e0030ad01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debug completo do algoritmo KNN.  <br /></td></tr>
+<tr class="separator:a31d5075dfdc6a9a4f77f575e0030ad01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função principal.  <br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Módulo principal do programa KNN concorrente. </p>
+<p>Este módulo coordena a execução do algoritmo K-Nearest Neighbors de forma paralela, integrando os módulos heap, utils e knn para processar datasets de treino e teste. </p>
+</div><h2 class="groupheader">Funções</h2>
+<a id="a19668515ed81c05c12def4d9691306f6" name="a19668515ed81c05c12def4d9691306f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19668515ed81c05c12def4d9691306f6">&#9670;&#160;</a></span>calcular_tempo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double calcular_tempo </td>
+          <td>(</td>
+          <td class="paramtype">struct timeval&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct timeval&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcula a diferença de tempo entre dois timevals. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>Tempo inicial </td></tr>
+    <tr><td class="paramname">end</td><td>Tempo final </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Diferença em segundos </dd></dl>
+
+</div>
+</div>
+<a id="a31d5075dfdc6a9a4f77f575e0030ad01" name="a31d5075dfdc6a9a4f77f575e0030ad01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31d5075dfdc6a9a4f77f575e0030ad01">&#9670;&#160;</a></span>debug_completo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void debug_completo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structDataset.html">Dataset</a> *&#160;</td>
+          <td class="paramname"><em>dataset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structHeap.html">Heap</a> *&#160;</td>
+          <td class="paramname"><em>heaps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Debug completo do algoritmo KNN. </p>
+
+</div>
+</div>
+<a id="a42bfb634deb867eba27f8b9c64d5d9d9" name="a42bfb634deb867eba27f8b9c64d5d9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42bfb634deb867eba27f8b9c64d5d9d9">&#9670;&#160;</a></span>debug_distancias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void debug_distancias </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structDataset.html">Dataset</a> *&#160;</td>
+          <td class="paramname"><em>dataset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função para debug - verifica algumas distâncias manualmente. </p>
+
+</div>
+</div>
+<a id="af72ee09b63345ec496685622aa90e34d" name="af72ee09b63345ec496685622aa90e34d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af72ee09b63345ec496685622aa90e34d">&#9670;&#160;</a></span>exibir_estatisticas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void exibir_estatisticas </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tempo_leitura</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tempo_processamento</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tempo_total</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_threads</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exibe as estatísticas de execução. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tempo_leitura</td><td>Tempo gasto na leitura dos dados (em segundos) </td></tr>
+    <tr><td class="paramname">tempo_processamento</td><td>Tempo gasto no processamento paralelo (em segundos) </td></tr>
+    <tr><td class="paramname">tempo_total</td><td>Tempo total de execução (em segundos) </td></tr>
+    <tr><td class="paramname">num_threads</td><td>Número de threads utilizadas </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a692e73d39b0df02827393cd8e6b71da3" name="a692e73d39b0df02827393cd8e6b71da3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692e73d39b0df02827393cd8e6b71da3">&#9670;&#160;</a></span>inicializar_dataset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inicializar_dataset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structDataset.html">Dataset</a> *&#160;</td>
+          <td class="paramname"><em>dataset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arquivo_treino</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arquivo_teste</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>K</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa o dataset com dados de treino e teste. </p>
+
+</div>
+</div>
+<a id="a69da6c839cd24c043d169f495910c24b" name="a69da6c839cd24c043d169f495910c24b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69da6c839cd24c043d169f495910c24b">&#9670;&#160;</a></span>inicializar_heaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inicializar_heaps </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structHeap.html">Heap</a> *&#160;</td>
+          <td class="paramname"><em>heaps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>K</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa as heaps para cada ponto de teste. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heaps</td><td>Array de heaps </td></tr>
+    <tr><td class="paramname">M</td><td>Número de pontos de teste (número de heaps) </td></tr>
+    <tr><td class="paramname">K</td><td>Capacidade de cada heap </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>0 em caso de sucesso, -1 em caso de erro </dd></dl>
+
+</div>
+</div>
+<a id="a8b7bbb9a7cfa6c39d77db544887890e6" name="a8b7bbb9a7cfa6c39d77db544887890e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7bbb9a7cfa6c39d77db544887890e6">&#9670;&#160;</a></span>ler_metadados()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ler_metadados </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>n_pontos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>dim</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a038b37e31a279e88623e6073ef4b6390" name="a038b37e31a279e88623e6073ef4b6390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038b37e31a279e88623e6073ef4b6390">&#9670;&#160;</a></span>ler_pontos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ler_pontos </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPonto.html">Ponto</a> *&#160;</td>
+          <td class="paramname"><em>pontos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>n_pontos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>dimensoes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lê um dataset binário de um arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Nome do arquivo binário </td></tr>
+    <tr><td class="paramname">pontos</td><td>Array de pontos a ser preenchido </td></tr>
+    <tr><td class="paramname">n_pontos</td><td>Número de pontos no dataset </td></tr>
+    <tr><td class="paramname">dimensoes</td><td>Número de dimensões de cada ponto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>0 em caso de sucesso, -1 em caso de erro </dd></dl>
+
+</div>
+</div>
+<a id="a1e7b198254de30c5f288633930be644d" name="a1e7b198254de30c5f288633930be644d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e7b198254de30c5f288633930be644d">&#9670;&#160;</a></span>liberar_dataset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void liberar_dataset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structDataset.html">Dataset</a> *&#160;</td>
+          <td class="paramname"><em>dataset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera a memória do dataset. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataset</td><td>Ponteiro para a estrutura <a class="el" href="structDataset.html" title="Representação de um dataset de entrada a ser manipulado no programa.">Dataset</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac94156a1cf0b9b427792c193b88e7bb9" name="ac94156a1cf0b9b427792c193b88e7bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac94156a1cf0b9b427792c193b88e7bb9">&#9670;&#160;</a></span>liberar_heaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void liberar_heaps </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structHeap.html">Heap</a> *&#160;</td>
+          <td class="paramname"><em>heaps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>M</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera a memória das heaps. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heaps</td><td>Array de heaps </td></tr>
+    <tr><td class="paramname">M</td><td>Número de heaps </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função principal. </p>
+
+</div>
+</div>
+<a id="a2e6c0b64ea6661d9fc2653f848fb6a0d" name="a2e6c0b64ea6661d9fc2653f848fb6a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e6c0b64ea6661d9fc2653f848fb6a0d">&#9670;&#160;</a></span>salvar_resultados()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void salvar_resultados </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structHeap.html">Heap</a> *&#160;</td>
+          <td class="paramname"><em>heaps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>K</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Salva os resultados em um arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heaps</td><td>Array de heaps com os resultados </td></tr>
+    <tr><td class="paramname">M</td><td>Número de pontos de teste </td></tr>
+    <tr><td class="paramname">K</td><td>Número de vizinhos mais próximos </td></tr>
+    <tr><td class="paramname">filename</td><td>Nome do arquivo de saída </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

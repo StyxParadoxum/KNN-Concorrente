@@ -1,5 +1,7 @@
 <map id="src/utils.h" name="src/utils.h">
-<area shape="rect" id="Node000001" title="Declarações de funções e estruturas utilitárias do projeto." alt="" coords="5,5,91,31"/>
-<area shape="rect" id="Node000002" href="$utils_8c.html" title=" " alt="" coords="6,79,90,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,44,51,79,45,79,45,44"/>
+<area shape="rect" id="Node000001" title="Declarações de funções e estruturas utilitárias do projeto." alt="" coords="62,5,147,31"/>
+<area shape="rect" id="Node000002" href="$main_8c.html" title="Módulo principal do programa KNN concorrente." alt="" coords="5,79,95,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,43,61,80,57,77,85,40"/>
+<area shape="rect" id="Node000003" href="$utils_8c.html" title=" " alt="" coords="119,79,203,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,40,154,77,150,80,120,43"/>
 </map>

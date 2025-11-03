@@ -99,6 +99,8 @@ Atributos Públicos</h2></td></tr>
 <tr class="separator:aa2252adfefbc5bdabb10f860b18b16ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44e74a76fae2547a3cf3230585c47806" id="r_a44e74a76fae2547a3cf3230585c47806"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structHeap.html#a44e74a76fae2547a3cf3230585c47806">length</a></td></tr>
 <tr class="separator:a44e74a76fae2547a3cf3230585c47806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d7e78c781ce21aafe6a35bd5498f0c" id="r_ad1d7e78c781ce21aafe6a35bd5498f0c"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structHeap.html#ad1d7e78c781ce21aafe6a35bd5498f0c">mutex</a></td></tr>
+<tr class="separator:ad1d7e78c781ce21aafe6a35bd5498f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
 <div class="textblock"><p>Estrutura que representa uma heap de máximo. </p>
@@ -131,6 +133,21 @@ Atributos Públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Capacidade máxima da heap. </p>
+
+</div>
+</div>
+<a id="ad1d7e78c781ce21aafe6a35bd5498f0c" name="ad1d7e78c781ce21aafe6a35bd5498f0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1d7e78c781ce21aafe6a35bd5498f0c">&#9670;&#160;</a></span>mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t Heap::mutex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mutex for thread-safe heap operations. </p>
 
 </div>
 </div>
