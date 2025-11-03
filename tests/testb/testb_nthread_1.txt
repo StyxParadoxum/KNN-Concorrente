@@ -6,32 +6,32 @@ Treino: 100000 pontos, Teste: 1000 pontos, Dimensões: 10, K: 5
 Iniciando processamento paralelo com 1 threads...
 Processamento paralelo concluído!
 Salvando resultados...
-Resultados salvos em tests/test_b.txt
+Resultados salvos em output.txt
 
 Primeiros resultados (verificação):
 Ponto de teste 0 - K-vizinhos:
-  ID: 61189, Distância: 382.159955
-  ID: 5310, Distância: 376.403122
-  ID: 14487, Distância: 356.304016
-  ID: 44059, Distância: 374.666378
-  ID: 15653, Distância: 366.942817
+  ID: 2526, Distância: 419.454490
+  ID: 52074, Distância: 419.305936
+  ID: 88799, Distância: 345.724818
+  ID: 18031, Distância: 341.996705
+  ID: 83722, Distância: 392.063619
 Ponto de teste 1 - K-vizinhos:
-  ID: 8085, Distância: 335.660132
-  ID: 98267, Distância: 325.302873
-  ID: 34758, Distância: 289.404604
-  ID: 79842, Distância: 296.534630
-  ID: 6940, Distância: 299.283346
+  ID: 79496, Distância: 344.744348
+  ID: 90325, Distância: 332.701014
+  ID: 26487, Distância: 329.264109
+  ID: 65642, Distância: 308.176134
+  ID: 89859, Distância: 309.243429
 Ponto de teste 2 - K-vizinhos:
-  ID: 4763, Distância: 400.512383
-  ID: 20178, Distância: 398.356919
-  ID: 64731, Distância: 292.846255
-  ID: 69862, Distância: 393.137976
-  ID: 67383, Distância: 361.105679
+  ID: 83721, Distância: 362.540905
+  ID: 24373, Distância: 338.538302
+  ID: 38911, Distância: 334.101797
+  ID: 18624, Distância: 334.955095
+  ID: 93682, Distância: 279.458308
 
 === ESTATÍSTICAS DE EXECUÇÃO ===
-Tempo de leitura dos dados: 0.016577 segundos
-Tempo de processamento paralelo: 1.469554 segundos
-Tempo total de execução: 1.487602 segundos
+Tempo de leitura dos dados: 0.014140 segundos
+Tempo de processamento paralelo: 1.570639 segundos
+Tempo total de execução: 1.586237 segundos
 Número de threads utilizadas: 1
 ===============================
 

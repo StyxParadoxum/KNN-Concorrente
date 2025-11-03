@@ -2,30 +2,36 @@
 Lendo dataset de treino...
 Lendo dataset de teste...
 Datasets carregados com sucesso!
-Treino: 1000 pontos, Teste: 100 pontos, Dimensões: 2, K: 3
+Treino: 1000 pontos, Teste: 100 pontos, Dimensões: 10, K: 5
 Iniciando processamento paralelo com 2 threads...
 Processamento paralelo concluído!
 Salvando resultados...
-Resultados salvos em tests/test_a.txt
+Resultados salvos em output.txt
 
 Primeiros resultados (verificação):
 Ponto de teste 0 - K-vizinhos:
-  ID: 562, Distância: 18.240906
-  ID: 395, Distância: 11.713089
-  ID: 957, Distância: 15.607840
+  ID: 224, Distância: 590.094115
+  ID: 683, Distância: 587.724998
+  ID: 703, Distância: 544.188947
+  ID: 174, Distância: 516.360628
+  ID: 29, Distância: 571.881188
 Ponto de teste 1 - K-vizinhos:
-  ID: 163, Distância: 36.347353
-  ID: 819, Distância: 17.032687
-  ID: 794, Distância: 27.173702
+  ID: 62, Distância: 567.742422
+  ID: 586, Distância: 560.408641
+  ID: 136, Distância: 566.412342
+  ID: 470, Distância: 501.412777
+  ID: 859, Distância: 541.791421
 Ponto de teste 2 - K-vizinhos:
-  ID: 440, Distância: 24.268703
-  ID: 816, Distância: 24.013905
-  ID: 15, Distância: 7.840652
+  ID: 427, Distância: 552.201496
+  ID: 422, Distância: 551.170270
+  ID: 908, Distância: 527.020523
+  ID: 242, Distância: 509.402139
+  ID: 826, Distância: 519.376819
 
 === ESTATÍSTICAS DE EXECUÇÃO ===
-Tempo de leitura dos dados: 0.000076 segundos
-Tempo de processamento paralelo: 0.001512 segundos
-Tempo total de execução: 0.001768 segundos
+Tempo de leitura dos dados: 0.000218 segundos
+Tempo de processamento paralelo: 0.001892 segundos
+Tempo total de execução: 0.002457 segundos
 Número de threads utilizadas: 2
 ===============================
 
