@@ -10,43 +10,43 @@ Resultados salvos em tests/test_c.txt
 
 Primeiros resultados (verificação):
 Ponto de teste 0 - K-vizinhos:
-  ID: 280724, Distância: 1879.005570
-  ID: 774449, Distância: 1873.313108
-  ID: 25333, Distância: 1837.988525
-  ID: 291510, Distância: 1853.289385
-  ID: 286176, Distância: 1863.253711
-  ID: 161432, Distância: 1765.911107
-  ID: 350980, Distância: 1812.472498
-  ID: 767897, Distância: 1825.708182
-  ID: 415585, Distância: 1813.264400
-  ID: 794276, Distância: 1843.399811
+  ID: 313853, Distância: 1930.254826
+  ID: 657584, Distância: 1929.525246
+  ID: 95759, Distância: 1922.192327
+  ID: 962861, Distância: 1922.870456
+  ID: 168072, Distância: 1928.551771
+  ID: 926273, Distância: 1908.163511
+  ID: 214902, Distância: 1876.095693
+  ID: 541843, Distância: 1821.282908
+  ID: 504046, Distância: 1896.564860
+  ID: 277476, Distância: 1913.458896
 Ponto de teste 1 - K-vizinhos:
-  ID: 58493, Distância: 1829.409347
-  ID: 884857, Distância: 1814.343164
-  ID: 763465, Distância: 1813.653453
-  ID: 928812, Distância: 1803.320069
-  ID: 497875, Distância: 1798.250093
-  ID: 292295, Distância: 1700.790502
-  ID: 799164, Distância: 1746.420152
-  ID: 752158, Distância: 1693.225452
-  ID: 259554, Distância: 1743.373408
-  ID: 914855, Distância: 1776.941415
+  ID: 894235, Distância: 1776.454409
+  ID: 31135, Distância: 1763.193324
+  ID: 4633, Distância: 1764.337885
+  ID: 366383, Distância: 1753.461906
+  ID: 762570, Distância: 1748.529042
+  ID: 56171, Distância: 1746.075287
+  ID: 96517, Distância: 1616.453580
+  ID: 908149, Distância: 1750.556358
+  ID: 311111, Distância: 1747.055558
+  ID: 958758, Distância: 1649.764487
 Ponto de teste 2 - K-vizinhos:
-  ID: 319530, Distância: 1892.185613
-  ID: 50482, Distância: 1881.833833
-  ID: 796380, Distância: 1876.682451
-  ID: 459502, Distância: 1870.348392
-  ID: 690214, Distância: 1823.395316
-  ID: 393018, Distância: 1869.502815
-  ID: 411043, Distância: 1764.410791
-  ID: 790561, Distância: 1864.781856
-  ID: 546938, Distância: 1731.248861
-  ID: 307476, Distância: 1768.147143
+  ID: 762304, Distância: 1786.228836
+  ID: 653344, Distância: 1782.563680
+  ID: 106949, Distância: 1777.731550
+  ID: 284013, Distância: 1777.666380
+  ID: 950051, Distância: 1780.379161
+  ID: 898787, Distância: 1716.071374
+  ID: 753309, Distância: 1676.339602
+  ID: 591945, Distância: 1747.837717
+  ID: 518509, Distância: 1729.378580
+  ID: 161931, Distância: 1759.393294
 
 === ESTATÍSTICAS DE EXECUÇÃO ===
-Tempo de leitura dos dados: 0.552948 segundos
-Tempo de processamento paralelo: 70.780511 segundos
-Tempo total de execução: 71.358596 segundos
+Tempo de leitura dos dados: 0.543899 segundos
+Tempo de processamento paralelo: 93.917684 segundos
+Tempo total de execução: 94.497727 segundos
 Número de threads utilizadas: 10
 ===============================
 
