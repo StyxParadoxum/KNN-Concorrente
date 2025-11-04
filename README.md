@@ -1,10 +1,12 @@
 # KNN-Concorrente
 
-Implementação concorrente do algoritmo K-Nearest Neighbors (KNN) em C usando threads POSIX.
+Implementação concorrente de um dos passos do algoritmo K-Nearest Neighbors (KNN) em C usando threads POSIX.
 
 ## Descrição
 
-Este projeto implementa uma versão paralela do algoritmo KNN que calcula os K vizinhos mais próximos para cada ponto de teste em relação a um conjunto de treino. A implementação utiliza threads para paralelizar o processamento, melhorando significativamente o desempenho para datasets grandes.
+Este projeto implementa uma versão paralela parcial do algoritmo KNN, que calcula os K vizinhos mais próximos para cada ponto de teste em relação a um conjunto de treino. A implementação utiliza threads para paralelizar a etapa da determinação dos k vizinhos mais próximos a fim de melhorar o desempenho do algoritmo para datasets grandes. Dessa forma, não se considerou a etapa de final de predição, seja de votação majoriária para problemas de classificação, ou
+de cálculo de média para problemas de regressão. O objetivo é acelerar a parte computacionalmente mais custosa do algoritmo, que envolve o cáculo das distâncias entre pontos de teste e treino, e a determinação do conjunto dos pontos de
+treino mais próximos de cada ponto no conjunto de teste.
 
 ## Arquitetura
 
@@ -42,11 +44,8 @@ O projeto inclui um Makefile para facilitar a compilação:
 # Compilar todos os programas
 make all
 
-# Compilar apenas o programa principal
-make bin/knn_main
-
-# Compilar apenas o gerador de dados
-make bin/data_gen
+# compilar todos em modo de depuração, executando uma versão sequencial e imprimindo logs extras
+#make DEBUG=1
 ```
 
 ## Uso
@@ -64,10 +63,8 @@ make generate_data
 ### 2. Executar o algoritmo KNN
 
 ```bash
-# Executar com os datasets gerados
-make run
-
-# Ou executar diretamente:
+# Executar com os arquivos de treino e test gerados, computando os 5 vizinhos mais próximos e usando
+# 4 threads
 ./bin/knn_main train.bin test.bin 5 4
 
 ### 3. Teste completo
@@ -81,9 +78,9 @@ make test
 
 ### Paralelização
 
-- Utiliza 4 threads por padrão para processamento paralelo
+- Número de threads definido em linha de comando
 - Cada thread processa uma fatia do conjunto de treino
-- Heaps thread-safe com mutexes para evitar condições de corrida
+- Heaps thread-safe com mutexes para evitar condições de corrida para auxliar na determinação dos vizinhos mais próximos
 
 ### Estrutura de Dados
 
