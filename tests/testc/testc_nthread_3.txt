@@ -2,51 +2,36 @@
 Lendo dataset de treino...
 Lendo dataset de teste...
 Datasets carregados com sucesso!
-Treino: 1000000 pontos, Teste: 10000 pontos, Dimensões: 50, K: 10
+Treino: 1000000 pontos, Teste: 10000 pontos, Dimensões: 100, K: 5
 Iniciando processamento paralelo com 3 threads...
 Processamento paralelo concluído!
 Salvando resultados...
-Resultados salvos em tests/test_c.txt
+Resultados salvos em output.txt
 
 Primeiros resultados (verificação):
 Ponto de teste 0 - K-vizinhos:
-  ID: 392203, Distância: 1869.062837
-  ID: 645319, Distância: 1847.690282
-  ID: 947343, Distância: 1844.758578
-  ID: 199114, Distância: 1831.304458
-  ID: 562751, Distância: 1826.098954
-  ID: 50577, Distância: 1805.239728
-  ID: 361175, Distância: 1763.052329
-  ID: 244551, Distância: 1807.923408
-  ID: 363453, Distância: 1829.036420
-  ID: 728398, Distância: 1752.788331
+  ID: 761216, Distância: 3059.402106
+  ID: 343594, Distância: 3045.584382
+  ID: 436596, Distância: 3016.994461
+  ID: 797801, Distância: 3014.386423
+  ID: 242000, Distância: 3006.138872
 Ponto de teste 1 - K-vizinhos:
-  ID: 702348, Distância: 1867.792027
-  ID: 581975, Distância: 1863.900096
-  ID: 941033, Distância: 1851.176179
-  ID: 946545, Distância: 1847.508373
-  ID: 542582, Distância: 1767.145993
-  ID: 191996, Distância: 1834.652665
-  ID: 404739, Distância: 1850.739695
-  ID: 824801, Distância: 1759.686087
-  ID: 503223, Distância: 1793.788313
-  ID: 482255, Distância: 1711.890381
+  ID: 311492, Distância: 2976.619788
+  ID: 604593, Distância: 2955.333975
+  ID: 34574, Distância: 2932.084667
+  ID: 778909, Distância: 2926.065218
+  ID: 173807, Distância: 2949.972821
 Ponto de teste 2 - K-vizinhos:
-  ID: 884592, Distância: 1853.820266
-  ID: 727103, Distância: 1848.856261
-  ID: 670537, Distância: 1842.123040
-  ID: 512527, Distância: 1807.469052
-  ID: 721429, Distância: 1826.744851
-  ID: 401851, Distância: 1600.866611
-  ID: 883522, Distância: 1776.799402
-  ID: 281692, Distância: 1682.657037
-  ID: 116580, Distância: 1792.952183
-  ID: 898279, Distância: 1764.606551
+  ID: 986379, Distância: 2918.280494
+  ID: 264808, Distância: 2901.711244
+  ID: 142273, Distância: 2894.217164
+  ID: 467833, Distância: 2777.287998
+  ID: 174191, Distância: 2828.518623
 
 === ESTATÍSTICAS DE EXECUÇÃO ===
-Tempo de leitura dos dados: 0.555219 segundos
-Tempo de processamento paralelo: 150.822062 segundos
-Tempo total de execução: 151.407818 segundos
+Tempo de leitura dos dados: 1.213210 segundos
+Tempo de processamento paralelo: 314.941541 segundos
+Tempo total de execução: 316.175634 segundos
 Número de threads utilizadas: 3
 ===============================
 
